@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ScrollAnimation } from "@/components/scroll-animation"
 
 const services = [
   {
@@ -62,7 +61,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeUp" className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-3 sm:mb-4">
             Our Services
           </Badge>
@@ -73,15 +72,12 @@ export function ServicesSection() {
           <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             From custom websites to complete SEO strategies, we provide intelligent solutions that drive real business results.
           </p>
-        </ScrollAnimation>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <ScrollAnimation 
+            <div 
               key={index} 
-              animation="fadeUp" 
-              delay={index * 0.1}
-              duration={0.6}
               className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20"
             >
               <Card className="h-full">
@@ -115,11 +111,11 @@ export function ServicesSection() {
                   </Button>
                 </CardContent>
               </Card>
-            </ScrollAnimation>
+            </div>
           ))}
         </div>
 
-        <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-8 sm:mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
             Ready to transform your digital presence?
           </p>
@@ -142,7 +138,7 @@ export function ServicesSection() {
               Learn More
             </Button>
           </div>
-        </ScrollAnimation>
+        </div>
       </div>
     </section>
   )

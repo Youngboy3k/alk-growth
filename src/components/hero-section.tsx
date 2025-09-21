@@ -63,23 +63,7 @@ export function HeroSection() {
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
           >
             <div className="inline-block overflow-hidden">
-              {Array.from("YOUR").map((char, index) => (
-                <span key={index} className="char inline-block">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </div>
-            <span className="mx-2">{" "}</span>
-            <div className="inline-block overflow-hidden">
-              {Array.from("SEO-READY").map((char, index) => (
-                <span key={index} className="char inline-block">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </div>
-            <span className="mx-2">{" "}</span>
-            <div className="inline-block overflow-hidden">
-              {Array.from("WEBSITE,").map((char, index) => (
+              {Array.from("YOUR SEO-READY WEBSITE,").map((char, index) => (
                 <span key={index} className="char inline-block">
                   {char === " " ? "\u00A0" : char}
                 </span>
@@ -87,23 +71,7 @@ export function HeroSection() {
             </div>
             <br />
             <div className="inline-block overflow-hidden">
-              {Array.from("BUILT").map((char, index) => (
-                <span key={index} className="char inline-block text-primary">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </div>
-            <span className="mx-2">{" "}</span>
-            <div className="inline-block overflow-hidden">
-              {Array.from("FOR").map((char, index) => (
-                <span key={index} className="char inline-block text-primary">
-                  {char === " " ? "\u00A0" : char}
-                </span>
-              ))}
-            </div>
-            <span className="mx-2">{" "}</span>
-            <div className="inline-block overflow-hidden">
-              {Array.from("GROWTH.").map((char, index) => (
+              {Array.from("BUILT FOR GROWTH.").map((char, index) => (
                 <span key={index} className="char inline-block text-primary">
                   {char === " " ? "\u00A0" : char}
                 </span>
