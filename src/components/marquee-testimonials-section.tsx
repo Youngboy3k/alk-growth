@@ -6,11 +6,6 @@ import { useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-// Register ScrollTrigger plugin
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger)
-}
-
 const testimonials = [
   {
     name: "Sarah Johnson",
@@ -80,7 +75,10 @@ export function MarqueeTestimonialsSection() {
   const bottomRowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && sectionRef.current && topRowRef.current && bottomRowRef.current) {
+    // Register ScrollTrigger plugin on client side
+    gsap.registerPlugin(ScrollTrigger)
+    
+    if (sectionRef.current && topRowRef.current && bottomRowRef.current) {
       const topCards = topRowRef.current.querySelectorAll('.testimonial-card')
       const bottomCards = bottomRowRef.current.querySelectorAll('.testimonial-card')
 

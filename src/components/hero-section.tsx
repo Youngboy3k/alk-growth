@@ -11,7 +11,7 @@ export function HeroSection() {
 
   useEffect(() => {
     // Only run on client side to avoid hydration issues
-    if (typeof window !== 'undefined' && unicornRef.current) {
+    if (unicornRef.current) {
       const script = document.createElement('script')
       script.type = 'text/javascript'
       script.innerHTML = `!function(){if(!window.UnicornStudio){window.UnicornStudio={isInitialized:!1};var i=document.createElement("script");i.src="https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v1.4.31/dist/unicornStudio.umd.js",i.onload=function(){window.UnicornStudio.isInitialized||(UnicornStudio.init(),window.UnicornStudio.isInitialized=!0)},(document.head || document.body).appendChild(i)}}();`
@@ -21,7 +21,7 @@ export function HeroSection() {
 
   useEffect(() => {
     // GSAP headline animation
-    if (typeof window !== 'undefined' && headlineRef.current) {
+    if (headlineRef.current) {
       const chars = headlineRef.current.querySelectorAll('.char')
       
       // Set initial state
