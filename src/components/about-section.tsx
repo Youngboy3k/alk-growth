@@ -9,31 +9,31 @@ export function AboutSection() {
     <section id="about" className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <ScrollAnimation animation="fadeUp" className="text-center mb-12">
-            <Badge variant="secondary" className="mb-4">
+          <ScrollAnimation animation="fadeUp" className="text-center mb-8 sm:mb-12">
+            <Badge variant="secondary" className="mb-3 sm:mb-4">
               About ALK Growth
             </Badge>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               AI-Powered Digital{" "}
               <span className="text-primary">Excellence</span>
             </h2>
           </ScrollAnimation>
 
           <ScrollAnimation animation="fadeUp" delay={0.1} duration={0.6} className="prose prose-lg max-w-none text-muted-foreground">
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               We're AI-powered website and SEO specialists who help businesses dominate their markets through intelligent digital solutions. Our team combines cutting-edge artificial intelligence with proven SEO strategies to build websites that don't just look great—they perform exceptionally.
             </p>
 
-            <p className="text-lg leading-relaxed mb-6">
+            <p className="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
               Founded on the principle that every business deserves a competitive edge online, we've developed proprietary AI systems that analyze, optimize, and continuously improve your web presence. From local businesses to growing enterprises, we've helped hundreds of companies achieve measurable growth through smarter websites and strategic SEO.
             </p>
 
-            <p className="text-lg leading-relaxed mb-8">
+            <p className="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
               Our mission is simple: leverage AI technology to make professional website building and SEO optimization accessible, effective, and results-driven for businesses of all sizes.
             </p>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
             <ScrollAnimation animation="fadeUp" delay={0.2} duration={0.5} className="text-center p-6 rounded-lg bg-card border border-border/50">
               <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit">
                 <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

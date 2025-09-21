@@ -9,23 +9,23 @@ export function ContactSection() {
   return (
     <section id="contact" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeUp" className="text-center mb-12 lg:mb-16">
-          <Badge variant="secondary" className="mb-4">
+        <ScrollAnimation animation="fadeUp" className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <Badge variant="secondary" className="mb-3 sm:mb-4">
             Get In Touch
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Contact{" "}
             <span className="text-primary">ALK Growth</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             Ready to transform your digital presence? Let's discuss your project and how we can help you grow.
           </p>
         </ScrollAnimation>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             {/* Contact Info */}
-            <ScrollAnimation animation="slideLeft" delay={0.1} duration={0.6} className="space-y-8">
+            <ScrollAnimation animation="slideLeft" delay={0.1} duration={0.6} className="space-y-6 sm:space-y-8">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
@@ -126,20 +126,26 @@ export function ContactSection() {
           </div>
 
           {/* CTA Section */}
-          <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-12">
-            <p className="text-muted-foreground mb-6">
+          <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-8 sm:mt-12">
+            <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
               Ready to get started? Choose your preferred way to connect.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
               <Button 
                 size="lg"
+                className="w-full sm:w-auto"
                 data-cal-link="info-alk-growth.com/15min"
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view"}'
               >
                 Get Started
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                asChild
+              >
                 <a href="mailto:info@alk-growth.com">
                   Email Us
                 </a>

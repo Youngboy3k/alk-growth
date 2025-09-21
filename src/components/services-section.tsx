@@ -62,20 +62,20 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <ScrollAnimation animation="fadeUp" className="text-center mb-12 lg:mb-16">
-          <Badge variant="secondary" className="mb-4">
+        <ScrollAnimation animation="fadeUp" className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <Badge variant="secondary" className="mb-3 sm:mb-4">
             Our Services
           </Badge>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             AI-Powered Solutions for{" "}
             <span className="text-primary">Digital Growth</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
             From custom websites to complete SEO strategies, we provide intelligent solutions that drive real business results.
           </p>
         </ScrollAnimation>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <ScrollAnimation 
               key={index} 
@@ -119,20 +119,26 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-12">
-          <p className="text-muted-foreground mb-6">
+        <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-8 sm:mt-12">
+          <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
             Ready to transform your digital presence?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
             <Button 
               size="lg"
+              className="w-full sm:w-auto"
               data-cal-link="info-alk-growth.com/15min"
               data-cal-namespace="15min"
               data-cal-config='{"layout":"month_view"}'
             >
               Book Consultation
             </Button>
-            <Button variant="outline" size="lg" onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto"
+              onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            >
               Learn More
             </Button>
           </div>

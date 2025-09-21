@@ -56,11 +56,11 @@ export function HeroSection() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-20 flex items-end justify-start min-h-screen">
-        <div className="max-w-4xl">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-16 lg:pb-24 pt-24 sm:pt-28 lg:pt-32 flex items-center justify-center min-h-screen">
+        <div className="max-w-5xl text-center">
           <h1 
             ref={headlineRef}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold leading-[1.1] tracking-tight text-foreground"
           >
             <div className="inline-block overflow-hidden">
               {Array.from("YOUR").map((char, index) => (
@@ -111,15 +111,15 @@ export function HeroSection() {
             </div>
           </h1>
           
-          <div className="mt-4 sm:mt-6">
+          <div className="mt-6 sm:mt-8 lg:mt-10">
             <Button 
               size="lg" 
-              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto"
+              className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 h-auto w-full sm:w-auto"
               data-cal-link="info-alk-growth.com/15min"
               data-cal-namespace="15min"
               data-cal-config='{"layout":"month_view"}'
             >
-              Contact us
+              Get Started
             </Button>
           </div>
         </div>
