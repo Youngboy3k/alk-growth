@@ -23,8 +23,8 @@ export function useNavigationHighlight() {
       if (element) {
         ScrollTrigger.create({
           trigger: element,
-          start: "top 60%",
-          end: "bottom 40%",
+          start: "top 70%",
+          end: "bottom 30%",
           onEnter: () => setActiveSection(sectionId),
           onEnterBack: () => setActiveSection(sectionId),
           onLeave: () => {
@@ -34,7 +34,7 @@ export function useNavigationHighlight() {
               const nextElement = document.getElementById(nextSection)
               if (nextElement) {
                 const rect = nextElement.getBoundingClientRect()
-                if (rect.top > window.innerHeight * 0.6) {
+                if (rect.top > window.innerHeight * 0.7) {
                   setActiveSection("")
                 }
               }

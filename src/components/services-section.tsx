@@ -80,7 +80,8 @@ export function ServicesSection() {
             <ScrollAnimation 
               key={index} 
               animation="fadeUp" 
-              delay={index * 0.2}
+              delay={index * 0.1}
+              duration={0.6}
               className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20"
             >
               <Card className="h-full">
@@ -118,7 +119,7 @@ export function ServicesSection() {
           ))}
         </div>
 
-        <ScrollAnimation animation="fadeUp" delay={0.6} className="text-center mt-12">
+        <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-12">
           <p className="text-muted-foreground mb-6">
             Ready to transform your digital presence?
           </p>

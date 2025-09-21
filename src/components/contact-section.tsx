@@ -25,7 +25,7 @@ export function ContactSection() {
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Info */}
-            <ScrollAnimation animation="slideLeft" className="space-y-8">
+            <ScrollAnimation animation="slideLeft" delay={0.1} duration={0.6} className="space-y-8">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
@@ -74,7 +74,7 @@ export function ContactSection() {
             </ScrollAnimation>
 
             {/* Quick Contact Form */}
-            <ScrollAnimation animation="slideRight">
+            <ScrollAnimation animation="slideRight" delay={0.2} duration={0.6}>
               <Card>
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
@@ -126,7 +126,7 @@ export function ContactSection() {
           </div>
 
           {/* CTA Section */}
-          <ScrollAnimation animation="fadeUp" delay={0.4} className="text-center mt-12">
+          <ScrollAnimation animation="fadeUp" delay={0.3} duration={0.6} className="text-center mt-12">
             <p className="text-muted-foreground mb-6">
               Ready to get started? Choose your preferred way to connect.
             </p>
