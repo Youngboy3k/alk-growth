@@ -132,7 +132,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur-md">
+          <div className="lg:hidden border-t border-border bg-background/80 backdrop-blur-md">
             <div className="px-4 py-6 space-y-4">
               <button 
                 onClick={() => handleNavClick('services')}
