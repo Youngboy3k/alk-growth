@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ScrollAnimation } from "@/components/scroll-animation"
 
 const services = [
   {
@@ -61,7 +62,7 @@ export function ServicesSection() {
   return (
     <section id="services" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
+        <ScrollAnimation animation="fadeUp" className="text-center mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-4">
             Our Services
           </Badge>
@@ -72,45 +73,52 @@ export function ServicesSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             From custom websites to complete SEO strategies, we provide intelligent solutions that drive real business results.
           </p>
-        </div>
+        </ScrollAnimation>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20">
-              <CardHeader className="text-center pb-4">
-                <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
-                  {service.icon}
-                </div>
-                <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-0">
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
-                      <svg className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Button 
-                  className="w-full"
-                  data-cal-link="info-alk-growth.com/15min"
-                  data-cal-namespace="15min"
-                  data-cal-config='{"layout":"month_view"}'
-                >
-                  Get Started
-                </Button>
-              </CardContent>
-            </Card>
+            <ScrollAnimation 
+              key={index} 
+              animation="fadeUp" 
+              delay={index * 0.2}
+              className="group hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20"
+            >
+              <Card className="h-full">
+                <CardHeader className="text-center pb-4">
+                  <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-xl font-semibold">{service.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start text-sm text-muted-foreground">
+                        <svg className="w-4 h-4 text-primary mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    className="w-full"
+                    data-cal-link="info-alk-growth.com/15min"
+                    data-cal-namespace="15min"
+                    data-cal-config='{"layout":"month_view"}'
+                  >
+                    Get Started
+                  </Button>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <ScrollAnimation animation="fadeUp" delay={0.6} className="text-center mt-12">
           <p className="text-muted-foreground mb-6">
             Ready to transform your digital presence?
           </p>
@@ -127,7 +135,7 @@ export function ServicesSection() {
               Learn More
             </Button>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   )

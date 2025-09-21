@@ -8,6 +8,7 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
+import { useNavigationHighlight } from "@/hooks/use-navigation-highlight"
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId)
@@ -22,6 +23,8 @@ const scrollToSection = (sectionId: string) => {
 }
 
 export function Navbar() {
+  const activeSection = useNavigationHighlight()
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -40,7 +43,9 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <button 
                     onClick={() => scrollToSection('services')}
-                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                    className={`px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors ${
+                      activeSection === 'services' ? 'text-primary font-medium' : ''
+                    }`}
                   >
                     Services
                   </button>
@@ -50,7 +55,9 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <button 
                     onClick={() => scrollToSection('about')}
-                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                    className={`px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors ${
+                      activeSection === 'about' ? 'text-primary font-medium' : ''
+                    }`}
                   >
                     About
                   </button>
@@ -60,7 +67,9 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <button 
                     onClick={() => scrollToSection('how-it-works')}
-                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                    className={`px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors ${
+                      activeSection === 'how-it-works' ? 'text-primary font-medium' : ''
+                    }`}
                   >
                     How It Works
                   </button>
@@ -70,7 +79,9 @@ export function Navbar() {
                 <NavigationMenuLink asChild>
                   <button 
                     onClick={() => scrollToSection('testimonials')}
-                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                    className={`px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors ${
+                      activeSection === 'testimonials' ? 'text-primary font-medium' : ''
+                    }`}
                   >
                     Testimonials
                   </button>

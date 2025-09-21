@@ -3,12 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ScrollAnimation } from "@/components/scroll-animation"
 
 export function ContactSection() {
   return (
     <section id="contact" className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 lg:mb-16">
+        <ScrollAnimation animation="fadeUp" className="text-center mb-12 lg:mb-16">
           <Badge variant="secondary" className="mb-4">
             Get In Touch
           </Badge>
@@ -19,12 +20,12 @@ export function ContactSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Ready to transform your digital presence? Let's discuss your project and how we can help you grow.
           </p>
-        </div>
+        </ScrollAnimation>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Info */}
-            <div className="space-y-8">
+            <ScrollAnimation animation="slideLeft" className="space-y-8">
               <Card>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3">
@@ -70,10 +71,10 @@ export function ContactSection() {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </ScrollAnimation>
 
             {/* Quick Contact Form */}
-            <div>
+            <ScrollAnimation animation="slideRight">
               <Card>
                 <CardHeader>
                   <CardTitle>Send us a Message</CardTitle>
@@ -121,11 +122,11 @@ export function ContactSection() {
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </ScrollAnimation>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center mt-12">
+          <ScrollAnimation animation="fadeUp" delay={0.4} className="text-center mt-12">
             <p className="text-muted-foreground mb-6">
               Ready to get started? Choose your preferred way to connect.
             </p>
@@ -144,7 +145,7 @@ export function ContactSection() {
                 </a>
               </Button>
             </div>
-          </div>
+          </ScrollAnimation>
         </div>
       </div>
     </section>
