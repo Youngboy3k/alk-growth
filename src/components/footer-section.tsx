@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { ALKGrowthLogo } from "@/components/alk-growth-logo"
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId)
@@ -23,8 +24,8 @@ export function FooterSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {/* Left Column - Company Info */}
             <div>
-              <div className="text-2xl font-bold text-primary mb-4">
-                ALK Growth
+              <div className="mb-4">
+                <ALKGrowthLogo size={140} className="h-10" />
               </div>
               <p className="text-muted-foreground mb-6 max-w-md">
                 AI-powered website building and SEO optimization service.
