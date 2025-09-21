@@ -76,12 +76,12 @@ export function FooterSection() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
             <span>© 2025 ALK Growth. All rights reserved.</span>
             <div className="flex gap-6">
-              <button className="hover:text-foreground transition-colors">
+              <a href="/privacy" className="hover:text-foreground transition-colors">
                 Privacy Policy
-              </button>
-              <button className="hover:text-foreground transition-colors">
+              </a>
+              <a href="/terms" className="hover:text-foreground transition-colors">
                 Terms of Service
-              </button>
+              </a>
             </div>
           </div>
         </div>
