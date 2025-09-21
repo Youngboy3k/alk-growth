@@ -9,6 +9,18 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    const offset = 80 // Account for fixed navbar height
+    const elementPosition = element.offsetTop - offset
+    window.scrollTo({
+      top: elementPosition,
+      behavior: 'smooth'
+    })
+  }
+}
+
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
@@ -26,37 +38,52 @@ export function Navbar() {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/services" className="px-3 lg:px-4 py-2 text-sm lg:text-base">
+                  <button 
+                    onClick={() => scrollToSection('services')}
+                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                  >
                     Services
-                  </Link>
+                  </button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/about" className="px-3 lg:px-4 py-2 text-sm lg:text-base">
+                  <button 
+                    onClick={() => scrollToSection('about')}
+                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                  >
                     About
-                  </Link>
+                  </button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/portfolio" className="px-3 lg:px-4 py-2 text-sm lg:text-base">
-                    Portfolio
-                  </Link>
+                  <button 
+                    onClick={() => scrollToSection('how-it-works')}
+                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                  >
+                    How It Works
+                  </button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/blog" className="px-3 lg:px-4 py-2 text-sm lg:text-base">
-                    Blog
-                  </Link>
+                  <button 
+                    onClick={() => scrollToSection('testimonials')}
+                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                  >
+                    Testimonials
+                  </button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink asChild>
-                  <Link href="/resources" className="px-3 lg:px-4 py-2 text-sm lg:text-base">
-                    Resources
-                  </Link>
+                  <button 
+                    onClick={() => scrollToSection('contact')}
+                    className="px-3 lg:px-4 py-2 text-sm lg:text-base hover:text-primary transition-colors"
+                  >
+                    Contact Us
+                  </button>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -64,11 +91,22 @@ export function Navbar() {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <Button variant="secondary" size="sm" className="hidden sm:inline-flex text-xs sm:text-sm">
+            <Button 
+              variant="secondary" 
+              size="sm" 
+              className="hidden sm:inline-flex text-xs sm:text-sm"
+              onClick={() => scrollToSection('contact')}
+            >
               Contact us
             </Button>
-            <Button size="sm" className="text-xs sm:text-sm">
-              Get started
+            <Button 
+              size="sm" 
+              className="text-xs sm:text-sm"
+              data-cal-link="info-alk-growth.com/15min"
+              data-cal-namespace="15min"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Get Started
             </Button>
           </div>
         </div>

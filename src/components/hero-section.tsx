@@ -112,7 +112,13 @@ export function HeroSection() {
           </h1>
           
           <div className="mt-4 sm:mt-6">
-            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto">
+            <Button 
+              size="lg" 
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 h-auto"
+              data-cal-link="info-alk-growth.com/15min"
+              data-cal-namespace="15min"
+              data-cal-config='{"layout":"month_view"}'
+            >
               Contact us
             </Button>
           </div>

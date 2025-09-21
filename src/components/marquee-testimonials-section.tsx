@@ -121,7 +121,7 @@ export function MarqueeTestimonialsSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="py-16 lg:py-24 bg-muted/30 overflow-hidden">
+    <section ref={sectionRef} id="testimonials" className="py-16 lg:py-24 bg-muted/30 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center">
           <Badge variant="secondary" className="mb-4">

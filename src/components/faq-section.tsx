@@ -80,10 +80,19 @@ export function FAQSection() {
             Still have questions? We're here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg">
+            <Button 
+              size="lg"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            >
               Contact Us
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              data-cal-link="info-alk-growth.com/15min"
+              data-cal-namespace="15min"
+              data-cal-config='{"layout":"month_view"}'
+            >
               Schedule a Call
             </Button>
           </div>
