@@ -4,66 +4,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
-const features = [
+const steps = [
   {
-    title: "AI-Powered SEO Optimization",
-    description: "Advanced algorithms analyze your content and optimize for search engines automatically.",
-    badge: "Popular",
+    title: "Discovery & Planning",
+    description: "We analyze your existing website or gather requirements for new builds",
     icon: (
       <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
-    )
+    ),
+    step: "01"
   },
   {
-    title: "Responsive Design",
-    description: "Mobile-first approach ensures your website looks perfect on all devices.",
-    badge: "Essential",
+    title: "AI Website Development", 
+    description: "Our AI system builds optimized websites with integrated SEO from the ground up",
     icon: (
       <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 9h4m-4 4h4" />
       </svg>
-    )
+    ),
+    step: "02"
   },
   {
-    title: "Performance Optimization",
-    description: "Lightning-fast loading times with optimized images and code.",
-    badge: "Fast",
+    title: "Growth Optimization",
+    description: "We implement automated blog content and ongoing SEO to maximize your search visibility",
     icon: (
       <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
       </svg>
-    )
-  },
-  {
-    title: "Content Management",
-    description: "Easy-to-use CMS for updating your content without technical knowledge.",
-    badge: "User-Friendly",
-    icon: (
-      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-      </svg>
-    )
-  },
-  {
-    title: "Analytics Integration",
-    description: "Track your website's performance with detailed analytics and insights.",
-    badge: "Insights",
-    icon: (
-      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-      </svg>
-    )
-  },
-  {
-    title: "24/7 Support",
-    description: "Round-the-clock support to help you grow your online presence.",
-    badge: "Support",
-    icon: (
-      <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-      </svg>
-    )
+    ),
+    step: "03"
   }
 ]
 
@@ -76,29 +47,27 @@ export function FeaturesSection() {
             How It Works
           </Badge>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
-            Everything you need to{" "}
-            <span className="text-primary">grow online</span>
+            Our Simple{" "}
+            <span className="text-primary">3-Step Process</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We provide comprehensive solutions to help your business thrive in the digital landscape.
+            From discovery to growth optimization, we make website building simple and effective.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="mb-2">{feature.icon}</div>
-                  <Badge variant="outline" className="text-xs">
-                    {feature.badge}
-                  </Badge>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {steps.map((step, index) => (
+            <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center">
+              <CardHeader className="pb-4">
+                <div className="mx-auto mb-4 p-3 rounded-lg bg-primary/10 w-fit group-hover:bg-primary/20 transition-colors">
+                  {step.icon}
                 </div>
-                <CardTitle className="text-xl">{feature.title}</CardTitle>
+                <div className="text-4xl font-bold text-primary mb-2">{step.step}</div>
+                <CardTitle className="text-xl">{step.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-base leading-relaxed">
-                  {feature.description}
+                  {step.description}
                 </CardDescription>
               </CardContent>
             </Card>

@@ -92,14 +92,6 @@ export function Navbar() {
           {/* CTA Buttons */}
           <div className="flex items-center gap-2 sm:gap-3">
             <Button 
-              variant="secondary" 
-              size="sm" 
-              className="hidden sm:inline-flex text-xs sm:text-sm"
-              onClick={() => scrollToSection('contact')}
-            >
-              Contact us
-            </Button>
-            <Button 
               size="sm" 
               className="text-xs sm:text-sm"
               data-cal-link="info-alk-growth.com/15min"
