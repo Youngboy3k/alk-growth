@@ -130,10 +130,10 @@ export function ContactSection() {
             <p className="text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base">
               Ready to get started? Choose your preferred way to connect.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button 
                 size="lg"
-                className="w-full sm:w-auto"
+                className="w-auto"
                 data-cal-link="info-alk-growth.com/15min"
                 data-cal-namespace="15min"
                 data-cal-config='{"layout":"month_view"}'
@@ -143,7 +143,7 @@ export function ContactSection() {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="w-full sm:w-auto"
+                className="w-auto"
                 asChild
               >
                 <a href="mailto:info@alk-growth.com">

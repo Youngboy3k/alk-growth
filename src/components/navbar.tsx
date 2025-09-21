@@ -174,7 +174,7 @@ export function Navbar() {
               </button>
               <div className="pt-4">
                 <Button 
-                  className="w-full"
+                  className="w-auto"
                   data-cal-link="info-alk-growth.com/15min"
                   data-cal-namespace="15min"
                   data-cal-config='{"layout":"month_view"}'
