@@ -46,7 +46,7 @@ export function useNavigationHighlight() {
 
     return () => {
       ScrollTrigger.getAll().forEach(trigger => {
-        if (trigger.vars.trigger?.id) {
+        if (trigger.vars.trigger && typeof trigger.vars.trigger === 'object' && 'id' in trigger.vars.trigger) {
           trigger.kill()
         }
       })
