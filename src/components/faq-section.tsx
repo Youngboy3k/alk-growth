@@ -6,36 +6,36 @@ import { Button } from "@/components/ui/button"
 
 const faqs = [
   {
-    question: "How long does it take to build a website?",
+    question: "What's the difference between your service packages?",
+    answer: "We offer three packages: Website Building (custom responsive design with AI optimization), Website + SEO (everything in Website Building plus advanced SEO implementation), and Full Growth Package (complete solution with automated blog content and ongoing monitoring). Each package builds upon the previous one."
+  },
+  {
+    question: "How long does website building take?",
     answer: "Typically, we deliver a complete website within 2-4 weeks, depending on the complexity and scope of your project. We'll provide you with a detailed timeline during our initial consultation."
+  },
+  {
+    question: "Do you work with existing websites for rebuilds?",
+    answer: "Yes, we can redesign and optimize existing websites. We'll analyze your current site and provide recommendations for improvements while preserving your brand identity."
+  },
+  {
+    question: "What's included in your SEO optimization?",
+    answer: "Our SEO services include keyword research, on-page optimization, meta tags, schema markup, site speed optimization, mobile optimization, technical SEO audit & fixes, and local SEO optimization."
+  },
+  {
+    question: "How does the blog automation work in the Full Growth Package?",
+    answer: "Our AI-powered blog automation system creates high-quality, SEO-optimized content based on your industry and target keywords. It includes content strategy development, automated posting schedules, and performance tracking."
+  },
+  {
+    question: "How do I choose the right package for my business?",
+    answer: "Start with our free consultation where we'll analyze your needs and goals. Generally, new businesses choose Website Building, established businesses wanting growth choose Website + SEO, and businesses serious about dominating their market choose the Full Growth Package."
   },
   {
     question: "Do you provide ongoing support after launch?",
     answer: "Yes! All our plans include support periods ranging from 3-12 months. We also offer ongoing maintenance and support packages for long-term partnerships."
   },
   {
-    question: "Can I update my website content myself?",
-    answer: "Absolutely! We provide a user-friendly content management system (CMS) that allows you to easily update text, images, and other content without any technical knowledge."
-  },
-  {
-    question: "What's included in SEO optimization?",
-    answer: "Our SEO services include keyword research, on-page optimization, meta tags, schema markup, site speed optimization, mobile optimization, and ongoing performance monitoring."
-  },
-  {
-    question: "Do you work with existing websites?",
-    answer: "Yes, we can redesign and optimize existing websites. We'll analyze your current site and provide recommendations for improvements while preserving your brand identity."
-  },
-  {
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, bank transfers, and can work with payment plans for larger projects. We'll discuss payment options during our consultation."
-  },
-  {
-    question: "Do you offer hosting services?",
-    answer: "Yes, we provide reliable hosting services optimized for performance and security. We can also work with your existing hosting provider if preferred."
-  },
-  {
-    question: "What makes ALK Growth different from other agencies?",
-    answer: "We combine AI-powered optimization with personalized service. Our focus on SEO-ready websites means your site is built for growth from day one, not as an afterthought."
+    question: "Can you help with local SEO for my business?",
+    answer: "Absolutely! Our Website + SEO and Full Growth packages include local SEO optimization, Google My Business setup, local keyword targeting, and location-based content strategies to help you dominate your local market."
   }
 ]
 
