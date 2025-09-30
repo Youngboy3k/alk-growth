@@ -117,7 +117,7 @@ export default function TestimonialsSection() {
             What Our Clients Say
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what industry leaders have to say about their experience with AlkGrowth.
+            Don't just take our word for it. Here's what industry leaders have to say about their experience with ALK Growth.
           </p>
         </motion.div>
 
@@ -132,17 +132,6 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="text-center mt-16"
-        >
-          <p className="text-muted-foreground text-sm">
-            Join hundreds of companies that trust AlkGrowth for their growth journey
-          </p>
-        </motion.div>
       </div>
     </section>
   );
