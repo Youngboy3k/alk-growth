@@ -130,7 +130,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground">Email</h3>
-                    <p className="text-muted-foreground text-sm">hello@alkgrowth.com</p>
+                    <p className="text-muted-foreground text-sm">alkgrowth@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
