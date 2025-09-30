@@ -244,7 +244,7 @@ export default function BeamsBackground({
             </div>
             
             {/* Seamless fade-out gradient at bottom - after content */}
-            <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-10" />
+            <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-background to-transparent pointer-events-none z-0" />
         </div>
     );
 }
