@@ -23,11 +23,11 @@ export const metadata: Metadata = {
   description: "Professional website design and development services. Modern design, clean code, and built exactly how you want them.",
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-new.ico', sizes: 'any' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
+    shortcut: '/favicon-new.ico',
     apple: '/apple-touch-icon.png',
   },
 };
@@ -39,6 +39,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="icon" href="/favicon-new.ico" />
+        <link rel="shortcut icon" href="/favicon-new.ico" />
+      </head>
       <body
         className={`${plusJakartaSans.variable} ${lora.variable} ${ibmPlexMono.variable} antialiased`}
         suppressHydrationWarning
