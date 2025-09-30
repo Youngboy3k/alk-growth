@@ -168,7 +168,8 @@
   --tracking-widest: calc(var(--tracking-normal) + 0.1em);
 }
 
-body {
+html, body {
+  overflow-x: hidden;
   letter-spacing: var(--tracking-normal);
 }
 

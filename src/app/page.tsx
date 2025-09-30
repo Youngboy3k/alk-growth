@@ -9,7 +9,7 @@ import { FooterSimple } from '@/components/footer-simple';
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden">
       <BeamsBackground className="min-h-screen w-full">
         <HeroSection />
       </BeamsBackground>

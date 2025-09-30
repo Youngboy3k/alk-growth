@@ -39,8 +39,8 @@ function createBeam(width: number, height: number, isDarkMode: boolean): Beam {
         const hueRange = 10;
 
     return {
-        x: Math.random() * width * 1.8 - width * 0.4,
-        y: Math.random() * height * 1.8 - height * 0.4,
+        x: Math.random() * width,
+        y: Math.random() * height,
         width: 30 + Math.random() * 60,
         length: height * 3,
         angle: angle,
@@ -92,13 +92,11 @@ export default function BeamsBackground({
 
         const updateCanvasSize = () => {
             const dpr = window.devicePixelRatio || 1;
-            // Extend canvas beyond viewport for seamless transitions
-            const extraWidth = window.innerWidth * 0.2;
-            const extraHeight = window.innerHeight * 0.2;
-            canvas.width = (window.innerWidth + extraWidth) * dpr;
-            canvas.height = (window.innerHeight + extraHeight) * dpr;
-            canvas.style.width = `${window.innerWidth + extraWidth}px`;
-            canvas.style.height = `${window.innerHeight + extraHeight}px`;
+            // Keep canvas within viewport bounds to prevent horizontal scroll
+            canvas.width = window.innerWidth * dpr;
+            canvas.height = window.innerHeight * dpr;
+            canvas.style.width = `${window.innerWidth}px`;
+            canvas.style.height = `${window.innerHeight}px`;
             ctx.scale(dpr, dpr);
 
             const totalBeams = MINIMUM_BEAMS * 1.5;
