@@ -21,7 +21,7 @@ const testimonials: TestimonialProps[] = [
     name: 'Liudmila Kiriaku',
     role: 'CEO',
     company: 'Compliance Group',
-    image: 'https://randomuser.me/api/portraits/women/44.jpg',
+    image: '',
     content: 'Working with ALK Growth was seamless from start to finish. They translated our complex AI compliance solutions into a clean, professional website that our enterprise clients love. The turnaround time was incredible.',
     rating: 5,
   },
@@ -29,40 +29,16 @@ const testimonials: TestimonialProps[] = [
     name: 'Thanos Konnaris',
     role: 'Director',
     company: 'Unifire',
-    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+    image: '',
     content: 'We needed a modern website that built trust with property managers and safety officers. ALK Growth delivered a professional, easy to navigate site that\'s helped us win bigger contracts. Highly recommend.',
     rating: 5,
   },
   {
-    name: 'Michelle Torres',
-    role: 'Founder',
-    company: 'TechStart Hub',
-    image: 'https://randomuser.me/api/portraits/women/65.jpg',
-    content: 'ALK Growth understood our vision immediately. They created a sleek, modern website that attracts both startups and investors. The design is bold, the site is fast, and we\'ve received countless compliments.',
-    rating: 5,
-  },
-  {
-    name: 'Dr. Sarah Williams',
-    role: 'Director',
-    company: 'Verde Wellness',
-    image: 'https://randomuser.me/api/portraits/women/33.jpg',
-    content: 'Our old website wasn\'t converting. ALK Growth redesigned everything and now our booking rates have doubled. The site is beautiful, loads fast, and our clients constantly mention how professional it looks.',
-    rating: 5,
-  },
-  {
-    name: 'Alex Martinez',
-    role: 'Product Manager',
-    company: 'NextGen Apps',
-    image: 'https://randomuser.me/api/portraits/men/45.jpg',
-    content: 'The analytics and growth strategies provided by AlkGrowth helped us make data-driven decisions that significantly improved our product-market fit.',
-    rating: 5,
-  },
-  {
-    name: 'Alex Martinez',
-    role: 'Product Manager',
-    company: 'NextGen Apps',
-    image: 'https://randomuser.me/api/portraits/men/45.jpg',
-    content: 'The analytics and growth strategies provided by AlkGrowth helped us make data-driven decisions that significantly improved our product-market fit.',
+    name: 'Alex Asonitis',
+    role: 'Owner',
+    company: 'AsoMedia',
+    image: '',
+    content: 'ALK Growth delivered exactly what we needed. Our new website perfectly captures our brand energy and has become our best sales tool. Client inquiries increased within the first month of launch.',
     rating: 5,
   },
 ];
@@ -105,7 +81,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: TestimonialProps
           <div className="flex items-center gap-3">
             <Avatar className="w-12 h-12">
               <AvatarImage 
-                src={testimonial.image} 
+                src={testimonial.image || ''} 
                 alt={testimonial.name}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
@@ -113,7 +89,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: TestimonialProps
                   if (fallback) fallback.style.display = 'flex';
                 }}
               />
-              <AvatarFallback className="bg-primary/10 text-primary font-medium hidden">
+              <AvatarFallback className="bg-primary/10 text-primary font-medium">
                 {testimonial.name.split(' ').map(n => n[0]).join('')}
               </AvatarFallback>
             </Avatar>
