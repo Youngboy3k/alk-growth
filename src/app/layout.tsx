@@ -40,9 +40,15 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/favicon-20250930184229.ico?v=2" />
-        <link rel="shortcut icon" href="/favicon-20250930184229.ico?v=2" />
+        <link rel="icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta httpEquiv="Pragma" content="no-cache" />
+        <meta httpEquiv="Expires" content="0" />
       </head>
       <body
         className={`${plusJakartaSans.variable} ${lora.variable} ${ibmPlexMono.variable} antialiased`}
