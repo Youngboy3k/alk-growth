@@ -19,22 +19,22 @@ export function StatsGrid({
   stats = [
     {
       value: "Create",
-      label: "Custom Design",
+      label: "",
       description: "Custom design for your brand",
     },
     {
       value: "Optimize",
-      label: "Performance",
+      label: "",
       description: "Fast and mobile friendly",
     },
     {
       value: "Deliver",
-      label: "Quick Launch",
+      label: "",
       description: "Live in weeks, not months",
     },
     {
       value: "Support",
-      label: "Ongoing Care",
+      label: "",
       description: "Always here to help",
     },
   ],
@@ -85,9 +85,11 @@ export function StatsGrid({
               >
                 {stat.value}
               </motion.div>
-              <h3 className="text-foreground mb-2 text-lg font-semibold">
-                {stat.label}
-              </h3>
+              {stat.label && (
+                <h3 className="text-foreground mb-2 text-lg font-semibold">
+                  {stat.label}
+                </h3>
+              )}
               {stat.description && (
                 <p className="text-foreground/70 text-sm">{stat.description}</p>
               )}
