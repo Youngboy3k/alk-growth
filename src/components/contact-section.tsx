@@ -6,57 +6,36 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+// Declare Cal.com types
+declare global {
+  interface Window {
+    Cal: any;
+  }
+}
+
 export default function ContactSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   // Initialize Cal.com inline embed
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.innerHTML = `
-      (function (C, A, L) { 
-        let p = function (a, ar) { a.q.push(ar); }; 
-        let d = C.document; 
-        C.Cal = C.Cal || function () { 
-          let cal = C.Cal; 
-          let ar = arguments; 
-          if (!cal.loaded) { 
-            cal.ns = {}; 
-            cal.q = cal.q || []; 
-            d.head.appendChild(d.createElement("script")).src = A; 
-            cal.loaded = true; 
-          } 
-          if (ar[0] === L) { 
-            const api = function () { p(api, arguments); }; 
-            const namespace = ar[1]; 
-            api.q = api.q || []; 
-            if(typeof namespace === "string"){
-              cal.ns[namespace] = cal.ns[namespace] || api;
-              p(cal.ns[namespace], ar);
-              p(cal, ["initNamespace", namespace]);
-            } else p(cal, ar); 
-            return;
-          } 
-          p(cal, ar); 
-        }; 
-      })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "30min", {origin:"https://app.cal.com"});
-      Cal.ns["30min"]("inline", {
-        elementOrSelector:"#my-cal-inline-30min",
-        config: {"layout":"month_view"},
-        calLink: "alk-growth.com/30min",
-      });
-      Cal.ns["30min"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    `;
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script when component unmounts
-      if (script.parentNode) {
-        script.parentNode.removeChild(script);
+    // Wait for the global Cal script to be available
+    const initCal = () => {
+      if (typeof window !== 'undefined' && window.Cal) {
+        // Initialize the inline embed
+        window.Cal.ns["30min"]("inline", {
+          elementOrSelector: "#my-cal-inline-30min",
+          config: { "layout": "month_view" },
+          calLink: "alk-growth.com/30min",
+        });
+      } else {
+        // Retry after a short delay if Cal is not yet available
+        setTimeout(initCal, 100);
       }
     };
+
+    // Start initialization
+    initCal();
   }, []);
 
   return (
@@ -101,9 +80,13 @@ export default function ContactSection() {
                 {/* Cal.com Inline Embed */}
                 <div 
                   id="my-cal-inline-30min"
-                  className="w-full h-[600px] overflow-auto rounded-lg border border-border/50"
+                  className="w-full h-[600px] overflow-auto rounded-lg border border-border/50 bg-background"
                   style={{ width: '100%', height: '600px', overflow: 'auto' }}
-                />
+                >
+                  <div className="flex items-center justify-center h-full text-muted-foreground">
+                    Loading calendar...
+                  </div>
+                </div>
               </CardContent>
             </Card>
           </motion.div>
