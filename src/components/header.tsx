@@ -11,6 +11,7 @@ const menuItems = [
     { name: 'Results', href: '#results' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Contact', href: '#contact' },
 ]
 
 export const HeroHeader = () => {
@@ -78,12 +79,12 @@ export const HeroHeader = () => {
                             </div>
                             <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
                                 <Button
-                                    asChild
                                     size="sm"
-                                    className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                                    <Link href="#">
-                                        <span>Get Started</span>
-                                    </Link>
+                                    className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                                    data-cal-link="alk-growth.com/30min"
+                                    data-cal-namespace="30min"
+                                    data-cal-config='{"layout":"month_view"}'>
+                                    <span>Get Started</span>
                                 </Button>
                             </div>
                         </div>
