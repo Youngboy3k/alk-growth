@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react'
-import Link from 'next/link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 // Image import removed - no longer needed
@@ -44,9 +43,12 @@ export default function HeroSection() {
                         <div className="mx-auto max-w-7xl px-6">
                             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <AnimatedGroup variants={transitionVariants}>
-                                    <Link
-                                        href="#link"
-                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
+                                    <Button
+                                        variant="ghost"
+                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+                                        data-cal-link="alk-growth.com/30min"
+                                        data-cal-namespace="30min"
+                                        data-cal-config='{"layout":"month_view"}'>
                                         <span className="text-foreground text-sm">Limited Spots Available for Q4 Projects</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -60,7 +62,7 @@ export default function HeroSection() {
                                                 </span>
                                             </div>
                                         </div>
-                                    </Link>
+                                    </Button>
                                 </AnimatedGroup>
 
                                 <TextEffect
