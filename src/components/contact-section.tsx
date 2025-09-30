@@ -3,11 +3,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export default function ContactSection() {
@@ -115,34 +111,6 @@ export default function ContactSection() {
                 <CardContent className="p-6">
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-full bg-primary/10">
-                      <Phone className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Phone</h3>
-                      <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-border transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-full bg-primary/10">
-                      <MapPin className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-foreground">Location</h3>
-                      <p className="text-muted-foreground text-sm">Remote & Global</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:border-border transition-all duration-300 hover:shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-full bg-primary/10">
                       <Clock className="h-6 w-6 text-primary" />
                     </div>
                     <div>
@@ -153,61 +121,6 @@ export default function ContactSection() {
                 </CardContent>
               </Card>
             </div>
-
-            {/* Quick Contact Form */}
-            <Card className="bg-card/50 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-foreground mb-6">Send us a message</h3>
-                <form className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="firstName" className="text-foreground">First Name</Label>
-                      <Input 
-                        id="firstName" 
-                        type="text" 
-                        placeholder="John"
-                        className="mt-1"
-                      />
-                    </div>
-                    <div>
-                      <Label htmlFor="lastName" className="text-foreground">Last Name</Label>
-                      <Input 
-                        id="lastName" 
-                        type="text" 
-                        placeholder="Doe"
-                        className="mt-1"
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <Label htmlFor="email" className="text-foreground">Email</Label>
-                    <Input 
-                      id="email" 
-                      type="email" 
-                      placeholder="john@example.com"
-                      className="mt-1"
-                    />
-                  </div>
-                  <div>
-                    <Label htmlFor="message" className="text-foreground">Message</Label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Tell us about your project..."
-                      className="mt-1 min-h-[100px]"
-                    />
-                  </div>
-                  <Button 
-                    type="submit" 
-                    className="w-full"
-                    data-cal-link="alk-growth.com/30min"
-                    data-cal-namespace="30min"
-                    data-cal-config='{"layout":"month_view"}'
-                  >
-                    Send Message
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </motion.div>
 
           {/* Cal.com Booking Widget */}
@@ -233,30 +146,6 @@ export default function ContactSection() {
               </CardContent>
             </Card>
 
-            {/* Additional Info */}
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="p-6">
-                <h4 className="font-semibold text-foreground mb-3">What to expect:</h4>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Free project consultation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Custom quote and timeline
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    Strategy discussion
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    No obligation to proceed
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
           </motion.div>
         </div>
       </div>
