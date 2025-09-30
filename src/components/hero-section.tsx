@@ -97,23 +97,23 @@ export default function HeroSection() {
                                         key={1}
                                         className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
                                         <Button
-                                            asChild
                                             size="lg"
-                                            className="rounded-xl px-5 text-base">
-                                            <Link href="#link">
-                                                <span className="text-nowrap">Get Started</span>
-                                            </Link>
+                                            className="rounded-xl px-5 text-base"
+                                            data-cal-link="alk-growth.com/30min"
+                                            data-cal-namespace="30min"
+                                            data-cal-config='{"layout":"month_view"}'>
+                                            <span className="text-nowrap">Get Started</span>
                                         </Button>
                                     </div>
                                     <Button
                                         key={2}
-                                        asChild
                                         size="lg"
                                         variant="ghost"
-                                        className="h-10.5 rounded-xl px-5">
-                                        <Link href="#link">
-                                            <span className="text-nowrap">Let's Talk</span>
-                                        </Link>
+                                        className="h-10.5 rounded-xl px-5"
+                                        data-cal-link="alk-growth.com/30min"
+                                        data-cal-namespace="30min"
+                                        data-cal-config='{"layout":"month_view"}'>
+                                        <span className="text-nowrap">Let's Talk</span>
                                     </Button>
                                 </AnimatedGroup>
                             </div>
