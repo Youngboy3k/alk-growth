@@ -4,7 +4,6 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
 
 interface TestimonialProps {
@@ -78,21 +77,7 @@ function TestimonialCard({ testimonial, index }: { testimonial: TestimonialProps
           </blockquote>
           
           {/* User Info */}
-          <div className="flex items-center gap-3">
-            <Avatar className="w-12 h-12">
-              <AvatarImage 
-                src={testimonial.image || ''} 
-                alt={testimonial.name}
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none';
-                  const fallback = e.currentTarget.nextElementSibling as HTMLElement;
-                  if (fallback) fallback.style.display = 'flex';
-                }}
-              />
-              <AvatarFallback className="bg-primary/10 text-primary font-medium">
-                {testimonial.name.split(' ').map(n => n[0]).join('')}
-              </AvatarFallback>
-            </Avatar>
+          <div className="flex items-center">
             <div className="flex-1">
               <div className="font-semibold text-foreground text-sm">
                 {testimonial.name}
