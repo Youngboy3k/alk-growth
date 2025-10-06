@@ -171,46 +171,58 @@ export default function AboutUs1() {
               valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }
             }
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-            className="mb-12 text-center"
+            className="mb-8 text-center"
           >
             <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
-              Our Core Values
+              Why Choose ALK Growth
             </h2>
-            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-              The principles that guide everything we do and every decision we
-              make.
-            </p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {aboutData.values?.map((value, index) => {
-              const IconComponent = iconComponents[value.icon];
-
-              return (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={
-                    valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                  }
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.1 + 0.2,
-                    ease: 'easeOut',
-                  }}
-                  whileHover={{ y: -5, scale: 1.02 }}
-                >
-                  <CardHoverEffect
-                    icon={<IconComponent className="h-6 w-6" />}
-                    title={value.title}
-                    description={value.description}
-                    variant="blue"
-                    glowEffect={true}
-                    size="lg"
-                  />
-                </motion.div>
-              );
-            })}
+          <div className="mx-auto grid max-w-4xl gap-4 text-left text-base md:grid-cols-2">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4"
+            >
+              <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
+              <p className="text-foreground/90">
+                <strong>Tailored design:</strong> each website is uniquely created for your brand and audience
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4"
+            >
+              <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
+              <p className="text-foreground/90">
+                <strong>Google & AI SEO:</strong> optimized to be found by search engines and AI assistants
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4"
+            >
+              <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
+              <p className="text-foreground/90">
+                <strong>End-to-end service:</strong> from onboarding to maintenance, we take care of everything
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4"
+            >
+              <span className="mt-1 inline-block h-2 w-2 rounded-full bg-primary" />
+              <p className="text-foreground/90">
+                <strong>Professional results:</strong> beautiful design, powerful structure, and clear messaging
+              </p>
+            </motion.div>
           </div>
         </div>
       </div>

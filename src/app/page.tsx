@@ -1,7 +1,6 @@
 import HeroSection from '@/components/hero-section';
 import BeamsBackground from '@/components/kokonutui/beams-background';
 import AboutUs1 from '@/components/mvpblocks/about-us-1';
-import { StatsGrid } from '@/components/stats-grid';
 import TestimonialsSection from '@/components/testimonials-section';
 import { FaqsAccordion } from '@/components/faqs-accordion';
 import ContactSection from '@/components/contact-section';
@@ -23,17 +22,15 @@ export default function Home() {
       <section id="process" className="scroll-mt-24 md:scroll-mt-28">
         <ProcessSection />
       </section>
-      <section id="results" className="scroll-mt-24 md:scroll-mt-28">
-        <StatsGrid />
-      </section>
+      {/* Removed Why Choose / Results section */}
       <section id="testimonials" className="scroll-mt-24 md:scroll-mt-28">
         <TestimonialsSection />
       </section>
-      <section id="faq" className="scroll-mt-24 md:scroll-mt-28">
-        <FaqsAccordion />
-      </section>
       <section id="contact" className="scroll-mt-24 md:scroll-mt-28">
         <ContactSection />
+      </section>
+      <section id="faq" className="scroll-mt-24 md:scroll-mt-28">
+        <FaqsAccordion />
       </section>
       <FooterSimple />
     </div>
