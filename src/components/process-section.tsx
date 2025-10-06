@@ -58,7 +58,7 @@ export default function ProcessSection() {
 
           <ol className="relative space-y-10 md:space-y-14">
             {steps.map((step, index) => {
-              const isLeft = index % 2 === 0
+              const isLeft = false
               return (
                 <li key={step.number} className="relative">
                   <motion.div
@@ -74,8 +74,8 @@ export default function ProcessSection() {
                       }`
                     }
                   >
-                    {/* Spacer swaps sides depending on step index */}
-                    <div className={`hidden md:block ${isLeft ? 'md:order-3' : ''}`} />
+                    {/* Spacer on the left; all cards aligned to the right */}
+                    <div className={`hidden md:block`} />
 
                     {/* Timeline node */}
                     <div className="relative mx-auto flex h-full w-12 items-center justify-center">
@@ -85,8 +85,8 @@ export default function ProcessSection() {
                       <div className="absolute left-1/2 top-1/2 -z-10 hidden h-full -translate-x-1/2 md:block" />
                     </div>
 
-                    {/* Card swaps sides depending on step index */}
-                    <div className={`${isLeft ? '' : 'md:order-3'}`}>
+                    {/* Card fixed on the right side */}
+                    <div className={`md:order-3`}>
                       <div className="group relative rounded-2xl border border-border/60 bg-gradient-to-b from-background/70 to-background p-6 shadow-sm backdrop-blur">
                         <div className="mb-3 flex items-center gap-3">
                           <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-primary/30 bg-primary/10 text-sm font-semibold text-primary">
