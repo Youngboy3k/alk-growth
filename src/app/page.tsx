@@ -6,6 +6,7 @@ import TestimonialsSection from '@/components/testimonials-section';
 import { FaqsAccordion } from '@/components/faqs-accordion';
 import ContactSection from '@/components/contact-section';
 import { FooterSimple } from '@/components/footer-simple';
+import ProcessSection from '@/components/process-section';
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
           <AboutUs1 />
         </section>
       </div>
+      <section id="process" className="scroll-mt-24 md:scroll-mt-28">
+        <ProcessSection />
+      </section>
       <section id="results" className="scroll-mt-24 md:scroll-mt-28">
         <StatsGrid />
       </section>
