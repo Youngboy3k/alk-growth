@@ -124,7 +124,7 @@ export default function HeroSection() {
                                     <div className="relative w-full max-w-7xl rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 p-2 shadow-2xl shadow-primary/25">
                                         <div className="rounded-2xl overflow-hidden bg-background">
                                             <video 
-                                                className="w-full h-auto min-h-[400px] rounded-2xl"
+                                                className="w-full h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] rounded-2xl object-cover"
                                                 controls
                                                 autoPlay
                                                 muted

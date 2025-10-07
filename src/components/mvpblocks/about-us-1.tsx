@@ -42,26 +42,26 @@ const defaultValues: AboutUsProps['values'] = [
   {
     title: 'Innovation',
     description:
-      'Modern design and cutting-edge technology that keeps you ahead.',
+      'Modern design and smart technology that keep your business ahead.',
     icon: 'Lightbulb',
   },
   {
     title: 'Collaboration',
     description:
-      'We work with you every step. Your vision, brought to life.',
+      'We work closely with you to bring your vision to life.',
     icon: 'Users',
   },
   {
     title: 'Excellence',
     description:
-      'Clean code, beautiful design, zero compromises.',
+      'Every detail crafted with precision for a flawless result.',
     icon: 'Sparkles',
   },
   {
     title: 'Impact',
     description:
-      'Websites that don\'t just look good. They grow your business.',
-    icon: 'Globe',
+      'Websites that attract clients and drive real growth.',
+    icon: 'Target',
   },
 ];
 
