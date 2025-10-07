@@ -79,7 +79,7 @@ export default function ContactSection() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-semibold text-foreground mb-4">Book a Free Consultation</h3>
                 <p className="text-muted-foreground mb-6">
-                  Schedule a 30-minute call to discuss your project, get a free quote, and see how we can help grow your business.
+                  Limited spots available for Q4 projects. Book your free 30-minute consultation to reserve your place.
                 </p>
                 
                 {/* Cal.com Inline Embed */}

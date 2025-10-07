@@ -54,10 +54,10 @@ export default function HeroSection() {
                                         <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
                                             <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
                                                 <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
+                                                    <ArrowRight className="m-auto size-3 text-primary" />
                                                 </span>
                                                 <span className="flex size-6">
-                                                    <ArrowRight className="m-auto size-3" />
+                                                    <ArrowRight className="m-auto size-3 text-primary" />
                                                 </span>
                                             </div>
                                         </div>
@@ -70,16 +70,15 @@ export default function HeroSection() {
                                     speedSegment={0.3}
                                     as="h1"
                                     className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                                    Your Next Customer Is Looking For You Online
+                                    We Make It Easy for Clients to Find You
                                 </TextEffect>
                                 <TextEffect
-                                    per="line"
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     delay={0.5}
                                     as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    Make sure they find a website worth remembering. Custom design that converts.
+                                    className="mx-auto mt-8 max-w-4xl text-balance text-lg">
+                                    We design websites that rank up on Google, get noticed by AI, and turn visitors into customers.
                                 </TextEffect>
 
                                 <AnimatedGroup

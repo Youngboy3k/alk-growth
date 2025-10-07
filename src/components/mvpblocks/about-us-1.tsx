@@ -69,11 +69,11 @@ export default function AboutUs1() {
   const aboutData = {
     title: 'About Us',
     subtitle:
-      'We create stunning, professional websites that help businesses grow. Fast, modern, and built exactly how you want them.',
+      'We build websites that help businesses grow.\nEach site is fast, visible, and ready for the future of search.\nOur designs are optimized to perform on Google and get recognized by AI, helping your business stay ahead and attract real clients.',
     mission:
-      'We create stunning, professional websites that help businesses grow. Fast, modern, and built exactly how you want them.',
+      'To make every business discoverable.\nWe create fast, modern websites built for visibility, designed to rank, get cited by AI, and convert visitors into customers.',
     vision:
-      'Every business deserves a website that looks amazing and actually brings in customers.',
+      'A world where every business has a website that can be found by both people and AI, trusted, professional, and built to bring measurable growth.',
     values: defaultValues,
     className: 'relative overflow-hidden py-20',
   };

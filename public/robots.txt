@@ -1,0 +1,36 @@
+# robots.txt for ALK Growth
+# https://alkgrowth.com
+
+User-agent: *
+Allow: /
+
+# Block sensitive or private directories
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /forms/
+Disallow: /scripts/
+Disallow: /config/
+
+# Allow main AI and SEO crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityAI
+Allow: /
+
+# Sitemap and AI meta reference
+Sitemap: https://alkgrowth.com/sitemap.xml
+LLMs: https://alkgrowth.com/llms.txt
+
+# Contact
+Contact: alkgrowth@gmail.com
+Last updated: October 2025

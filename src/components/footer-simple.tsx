@@ -28,8 +28,9 @@ export function FooterSimple({
     company: [
       { name: "About Us", url: "#about" },
       { name: "How it works", url: "#process" },
-      { name: "FAQ", url: "#faq" },
+      { name: "Pricing", url: "#pricing" },
       { name: "Contact", url: "#contact" },
+      { name: "FAQ", url: "#faq" },
     ],
   },
   social = {},
@@ -37,16 +38,16 @@ export function FooterSimple({
 }: FooterSimpleProps) {
   return (
     <footer className="border-t border-border bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-12">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12"
         >
-          {/* Company Info with Logo */}
-          <div className="lg:col-span-1">
+          {/* Company Info with Logo - Left Column */}
+          <div className="flex flex-col">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -73,19 +74,20 @@ export function FooterSimple({
             </motion.div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="lg:col-span-2">
+          {/* Navigation Links - Right Column */}
+          <div className="flex flex-col lg:items-center">
             {links.company && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="w-full lg:w-auto"
               >
-                <h4 className="text-foreground mb-4 text-sm font-semibold uppercase tracking-wide">
+                <h4 className="text-foreground mb-4 text-sm font-semibold uppercase tracking-wide text-center">
                   Navigation
                 </h4>
-                <ul className="grid grid-cols-2 gap-3">
+                <ul className="flex flex-col gap-4 text-center">
                   {links.company.map((link) => (
                     <li key={link.name}>
                       <a
