@@ -49,6 +49,20 @@
     transition: none !important;
     transform: none !important;
   }
+  
+  /* Force immediate rendering on mobile */
+  .mobile-no-animation {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+  
+  /* Disable framer-motion on mobile */
+  [data-framer-motion] {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 .spin {

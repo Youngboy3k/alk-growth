@@ -189,18 +189,8 @@ export default function AboutUs1() {
               const IconComponent = iconComponents[value.icon];
 
               return (
-                <motion.div
+                <div
                   key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={
-                    valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
-                  }
-                  transition={{
-                    duration: 0.2,
-                    delay: 0,
-                    ease: 'easeOut',
-                  }}
-                  whileHover={{ y: -5, scale: 1.02 }}
                   className="md:transition-all md:duration-300 mobile-no-animation"
                 >
                   <CardHoverEffect
@@ -211,7 +201,7 @@ export default function AboutUs1() {
                     glowEffect={true}
                     size="lg"
                   />
-                </motion.div>
+                </div>
               );
             })}
           </div>

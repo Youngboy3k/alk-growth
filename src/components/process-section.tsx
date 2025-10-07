@@ -43,11 +43,7 @@ export default function ProcessSection() {
   return (
     <section id="process" className="relative w-full overflow-hidden py-20 bg-background scroll-mt-40">
       <div className="container mx-auto px-4 md:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.2 }}
+        <div
           className="mx-auto mb-12 max-w-2xl text-center mobile-no-animation"
         >
           <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
@@ -56,7 +52,7 @@ export default function ProcessSection() {
           <p className="text-muted-foreground mx-auto mt-4 max-w-xl text-lg">
             Launch a high-performing website with a simple, guided process.
           </p>
-        </motion.div>
+        </div>
 
         {/* Steps using the same card style as About Us values */}
         <div className="mx-auto max-w-6xl relative">
@@ -65,11 +61,7 @@ export default function ProcessSection() {
           <ol className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.number}>
-                    <motion.div
-                      initial={{ opacity: 0, y: 24 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.4 }}
-                      transition={{ duration: 0.2, delay: 0 }}
+                    <div
                       className="mobile-no-animation"
                     >
                   <CardHoverEffect
@@ -88,7 +80,7 @@ export default function ProcessSection() {
                     glowEffect={true}
                     size="lg"
                   />
-                </motion.div>
+                </div>
               </li>
             ))}
           </ol>
