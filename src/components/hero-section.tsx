@@ -111,7 +111,7 @@ export default function HeroSection() {
                                         key={2}
                                         size="lg"
                                         variant="ghost"
-                                        className="h-10.5 rounded-xl px-5"
+                                        className="h-10.5 rounded-xl px-5 hover:bg-primary/10 hover:text-primary hover:border-primary/20"
                                         data-cal-link="alk-growth.com/30min"
                                         data-cal-namespace="30min"
                                         data-cal-config='{"layout":"month_view"}'>
