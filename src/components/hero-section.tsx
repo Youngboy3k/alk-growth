@@ -131,7 +131,6 @@ export default function HeroSection() {
                                                 loop
                                                 preload="none"
                                                 poster="/video-poster.jpg"
-                                                loading="lazy"
                                             >
                                                 <source src="/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
