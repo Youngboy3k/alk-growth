@@ -47,7 +47,7 @@ export default function HeroSection() {
                                         asChild
                                         variant="ghost"
                                         className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
-                                        <a href="#contact">
+                                        <a href="/contact">
                                         <span className="text-foreground text-sm">Limited Spots Available for Q4 Projects</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -112,7 +112,7 @@ export default function HeroSection() {
                                         variant="ghost"
                                         className="h-10.5 rounded-xl px-5 hover:bg-primary/10 hover:text-primary hover:border-primary/20"
                                         asChild>
-                                        <a href="#contact">
+                                        <a href="/contact">
                                             <span className="text-nowrap">Let's Talk</span>
                                         </a>
                                     </Button>
