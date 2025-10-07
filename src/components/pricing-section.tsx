@@ -1,211 +1,216 @@
-"use client"
+'use client';
 
-import { useMemo, useState } from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import { cn } from '@/lib/utils'
-
-type BasePlan = 'launch' | 'business'
-
-const BASE_PRICES: Record<BasePlan, number> = {
-  launch: 900,
-  business: 1400,
-}
-
-const CARE_MONTHLY = 100
-const BLOG_MONTHLY = 500
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
 
 export default function PricingSection() {
-  const [basePlan, setBasePlan] = useState<BasePlan>('business')
-  const [blogCount, setBlogCount] = useState<number>(0)
-
-  const oneTimeTotal = useMemo(() => BASE_PRICES[basePlan], [basePlan])
-  const monthlyTotal = useMemo(
-    () => CARE_MONTHLY + blogCount * BLOG_MONTHLY,
-    [blogCount]
-  )
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section id="pricing" className="py-16 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight">
-            Build Your Perfect Plan
+    <section 
+      ref={sectionRef}
+      className="relative w-full py-24 md:py-32 bg-gradient-to-b from-[#FAFAFF] to-[#FFFFFF] overflow-hidden"
+    >
+      {/* Top and bottom border glow */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.1)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.1)] to-transparent" />
+      
+      <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6">
+            Pricing
           </h2>
-          <p className="text-muted-foreground mt-2">
-            Customize your plan to fit your exact needs. Only pay for what you use.
+          <p className="text-lg text-[#555] max-w-2xl mx-auto">
+            We create professional, conversion-focused websites that help your business grow and stand out online.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Left: Builder Controls */}
-          <div className="space-y-4">
-            {/* Step 1 */}
-            <div>
-              <div className="text-foreground font-medium mb-3 text-sm">1. Choose your base plan</div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <PlanCard
-                  title="Launch"
-                  price="€900"
-                  period="one-time"
-                  description="One-page website for startups"
-                  selected={basePlan === 'launch'}
-                  onSelect={() => setBasePlan('launch')}
-                />
-                <PlanCard
-                  title="Business"
-                  price="€1,400"
-                  period="one-time"
-                  description="Multi-page website for growing companies"
-                  selected={basePlan === 'business'}
-                  onSelect={() => setBasePlan('business')}
-                />
-              </div>
-            </div>
-
-            {/* Step 2 */}
-            <div>
-              <div className="text-foreground font-medium mb-3 text-sm">2. Customize your plan</div>
-              <div className="space-y-3">
-                <div className="rounded-xl border border-border/40 bg-card/20 p-3">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-foreground font-medium text-sm">Website Care Plan</div>
-                      <div className="text-muted-foreground text-xs">Ongoing updates, performance checks</div>
-                    </div>
-                    <div className="text-foreground font-medium text-sm">€{CARE_MONTHLY}/mo</div>
+        {/* Pricing Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
+          {/* Single-Page Website */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="h-full"
+          >
+            <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
+                  style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+              <CardContent className="p-8 lg:p-12 h-full flex flex-col min-h-[600px]">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-semibold text-foreground mb-2">
+                    Single-Page Website
+                  </h3>
+                  <p className="text-[#555] text-base mb-4">
+                    Perfect for startups and small businesses
+                  </p>
+                  <div className="text-3xl md:text-4xl font-medium text-primary mb-6">
+                    €900
+                    <span className="text-lg text-[#555] font-normal"> (one-time)</span>
                   </div>
                 </div>
+                
+                <p className="text-[#555] text-base mb-6 flex-1">
+                  A professional one-page website that builds trust, performs beautifully on all devices, and helps you get found online.
+                </p>
 
-                <div className="rounded-xl border border-border/40 bg-card/20 p-3">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <div className="text-foreground font-medium text-sm">Growth Blog System</div>
-                      <div className="text-muted-foreground text-xs">8 SEO-optimized posts per month</div>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="sm"
-                        className="h-6 w-6 p-0 rounded-full"
-                        onClick={() => setBlogCount(Math.max(0, blogCount - 1))}
-                      >
-                        −
-                      </Button>
-                      <div className="w-4 text-center text-xs tabular-nums">{blogCount}</div>
-                      <Button
-                        type="button"
-                        variant="outline"
-                        size="sm"
-                        className="h-6 w-6 p-0 rounded-full"
-                        onClick={() => setBlogCount(1)}
-                      >
-                        +
-                      </Button>
-                      <div className="text-foreground font-medium text-sm ml-2">+€{BLOG_MONTHLY}/mo</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Summary */}
-          <div>
-            <Card className="bg-card/30 border border-border/40 rounded-xl">
-              <CardHeader className="pb-3">
-                <CardTitle className="text-foreground text-lg">Your Custom Plan</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <div className="text-muted-foreground text-sm">Base Plan</div>
-                  <div className="text-foreground font-medium text-sm">
-                    {basePlan === 'launch' ? 'Launch' : 'Business'} · €{oneTimeTotal} one-time
-                  </div>
-                </div>
-                <div className="h-px bg-border/40" />
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between">
-                    <div className="text-muted-foreground text-sm">Website Care Plan</div>
-                    <div className="text-foreground text-sm">€{CARE_MONTHLY}/mo</div>
-                  </div>
-                  {blogCount > 0 && (
-                    <div className="flex items-center justify-between">
-                      <div className="text-muted-foreground text-sm">Growth Blog System</div>
-                      <div className="text-foreground text-sm">+€{BLOG_MONTHLY}/mo</div>
-                    </div>
-                  )}
-                </div>
-                <div className="h-px bg-border/40" />
-                <div className="flex items-center justify-between">
-                  <div className="text-foreground font-semibold text-sm">Monthly Total</div>
-                  <div className="text-foreground font-semibold text-sm">€{monthlyTotal}/mo</div>
-                </div>
-
-                <div className="pt-2">
-                  <div className="text-foreground font-medium text-sm mb-2">Included Features:</div>
-                  <ul className="space-y-1 text-xs text-muted-foreground">
-                    <li className="flex items-center gap-2">
-                      <span className="text-green-500">✓</span>
-                      Optimized for Google & AI search
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-green-500">✓</span>
-                      Modern, responsive design
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-green-500">✓</span>
-                      Clear calls-to-action and contact form
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-green-500">✓</span>
-                      Performance and mobile optimization
-                    </li>
+                <div className="mb-8">
+                  <h4 className="text-lg font-medium text-foreground mb-4">Includes:</h4>
+                  <ul className="space-y-2 text-[#555] text-base">
+                    <li>• Modern, responsive design</li>
+                    <li>• Optimized for Google and AI visibility</li>
+                    <li>• Mobile-friendly and performance-optimized</li>
+                    <li>• Contact form and clear call-to-action</li>
+                    <li>• First month of maintenance & support included</li>
                   </ul>
                 </div>
-
-                <div className="pt-3">
-                  <Button asChild className="w-full h-9 text-sm rounded-full">
-                    <Link href="#contact">Get Started</Link>
-                  </Button>
+                
+                <div className="flex justify-center mt-auto">
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                    <Button
+                      size="lg"
+                      className="rounded-xl px-5 text-base"
+                      asChild
+                    >
+                      <a href="#contact">
+                        <span className="text-nowrap">Get Started</span>
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
-          </div>
+          </motion.div>
+
+          {/* Professional Website */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="h-full"
+          >
+            <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
+                  style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+              <CardContent className="p-8 lg:p-12 h-full flex flex-col min-h-[600px]">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-semibold text-foreground mb-2">
+                    Professional Website
+                  </h3>
+                  <p className="text-[#555] text-base mb-4">
+                    Best for growing businesses with more to showcase
+                  </p>
+                  <div className="text-3xl md:text-4xl font-medium text-primary mb-6">
+                    €1,400
+                    <span className="text-lg text-[#555] font-normal"> (one-time)</span>
+                  </div>
+                </div>
+                
+                <p className="text-[#555] text-base mb-6 flex-1">
+                  A multi-page structure designed for companies with multiple services, case studies, or a broader story to tell.
+                </p>
+
+                <div className="mb-8">
+                  <h4 className="text-lg font-medium text-foreground mb-4">Includes:</h4>
+                  <ul className="space-y-2 text-[#555] text-base">
+                    <li>• Everything from the Single-Page Website</li>
+                    <li>• Multi-page layout tailored to your content and goals</li>
+                    <li>• Ideal for businesses with multiple offerings or service areas</li>
+                  </ul>
+                </div>
+                
+                <div className="flex justify-center mt-auto">
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                    <Button
+                      size="lg"
+                      className="rounded-xl px-5 text-base"
+                      asChild
+                    >
+                      <a href="#contact">
+                        <span className="text-nowrap">Get Started</span>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </div>
+
+        {/* Add-ons Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="space-y-8 mb-16"
+        >
+          {/* Maintenance & Support */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-out border-0"
+               style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+              Maintenance & Support
+            </h3>
+            <p className="text-[#555] text-base">
+              Your first month is included. After that, ongoing care continues for <span className="font-medium text-primary">€100/month</span>, covering updates, performance checks, and minor adjustments.
+            </p>
+          </div>
+
+          {/* Blog Post Automation */}
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-out border-0"
+               style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+            <h3 className="text-xl font-semibold text-foreground mb-4">
+              Optional Add-On: Blog Post Automation
+            </h3>
+            <p className="text-[#555] text-base mb-4">
+              Boost your visibility even further
+            </p>
+            <div className="text-2xl font-medium text-primary mb-4">
+              €500/month
+            </div>
+            <p className="text-[#555] text-base">
+              Includes 8 SEO-optimized blog posts per month tailored to your business and audience, uploaded directly to your website.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="text-center"
+        >
+          <p className="text-[#555] text-lg mb-8 max-w-2xl mx-auto">
+            Every project starts with a free homepage preview see your website before you commit.
+          </p>
+          <div className="flex justify-center">
+            <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+              <Button
+                size="lg"
+                className="rounded-xl px-5 text-base"
+                asChild
+              >
+                <a href="#contact">
+                  <span className="text-nowrap">Get Started</span>
+                </a>
+              </Button>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }
-
-type PlanCardProps = {
-  title: string
-  price: string
-  period: string
-  description: string
-  selected?: boolean
-  onSelect?: () => void
-}
-
-function PlanCard({ title, price, period, description, selected, onSelect }: PlanCardProps) {
-  return (
-    <button
-      type="button"
-      onClick={onSelect}
-      className={cn(
-        'text-left rounded-xl border p-3 transition-colors w-full',
-        'bg-card/20 border-border/40 hover:border-border/60',
-        selected && 'border-primary/60 bg-primary/5 ring-1 ring-primary/50'
-      )}
-    >
-      <div className="text-sm font-semibold text-foreground">{title}</div>
-      <div className="text-lg font-bold text-foreground mt-1">{price}</div>
-      <div className="text-xs text-muted-foreground">{period}</div>
-      <div className="text-xs text-muted-foreground mt-2">{description}</div>
-    </button>
-  )
-}
-
-

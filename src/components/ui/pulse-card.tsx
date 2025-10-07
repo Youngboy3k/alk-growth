@@ -102,7 +102,7 @@ export function CardHoverEffect({
       whileHover={interactive ? { scale: hoverScale } : undefined}
       transition={{ duration: 0.3, ease: 'easeInOut', type: 'keyframes' }}
       className={cn(
-        'group relative z-0 w-full cursor-pointer overflow-hidden rounded-2xl',
+        'group relative z-0 w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-primary/60',
         sizeConfig.padding,
         // Light mode styles
         'bg-white/80 before:bg-linear-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl',
@@ -127,23 +127,6 @@ export function CardHoverEffect({
         } as React.CSSProperties
       }
     >
-      {/* Moving Border */}
-      <div
-        className="absolute inset-0 overflow-hidden rounded-[inherit]"
-        style={{
-          mask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-          maskComposite: 'exclude',
-          padding: '2px',
-        }}
-      >
-        <div
-          className="absolute inset-[-200%] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-          style={{
-            background: `conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 340deg, var(--card-color) 360deg)`,
-            animation: 'spin 4s linear infinite',
-          }}
-        />
-      </div>
 
       {/* Icon */}
       <IconWrapper

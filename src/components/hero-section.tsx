@@ -129,6 +129,7 @@ export default function HeroSection() {
                                                 autoPlay
                                                 muted
                                                 playsInline
+                                                loop
                                                 preload="metadata"
                                                 poster="/video-poster.jpg"
                                             >
