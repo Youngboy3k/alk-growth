@@ -184,7 +184,7 @@ export default function AboutUs1() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 relative">
             {/* Purple gradient shadow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl -z-10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-3xl blur-2xl -z-10 md:blur-3xl" />
             {aboutData.values?.map((value, index) => {
               const IconComponent = iconComponents[value.icon];
 

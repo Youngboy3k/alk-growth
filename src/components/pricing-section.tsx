@@ -15,9 +15,9 @@ export default function PricingSection() {
       ref={sectionRef}
       className="relative w-full py-24 md:py-32 bg-gradient-to-b from-[#FAFAFF] to-[#FFFFFF] overflow-hidden"
     >
-      {/* Top and bottom border glow */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.1)] to-transparent" />
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.1)] to-transparent" />
+      {/* Top and bottom border glow - Mobile optimized */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.05)] to-transparent md:via-[rgba(155,120,255,0.1)]" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[rgba(155,120,255,0.05)] to-transparent md:via-[rgba(155,120,255,0.1)]" />
       
       <div className="max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

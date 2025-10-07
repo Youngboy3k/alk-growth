@@ -45,10 +45,12 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-        <meta httpEquiv="Pragma" content="no-cache" />
-        <meta httpEquiv="Expires" content="0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta httpEquiv="Cache-Control" content="public, max-age=31536000, immutable" />
+        <meta name="theme-color" content="#7033ff" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

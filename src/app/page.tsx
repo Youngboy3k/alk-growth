@@ -1,12 +1,26 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/hero-section';
 import BeamsBackground from '@/components/kokonutui/beams-background';
-import AboutUs1 from '@/components/mvpblocks/about-us-1';
-import TestimonialsSection from '@/components/testimonials-section';
-import { FaqsAccordion } from '@/components/faqs-accordion';
-import ProcessSection from '@/components/process-section';
-import PricingSection from '@/components/pricing-section';
-import ContactSection from '@/components/contact-section';
-import { FooterSimple } from '@/components/footer-simple';
+
+// Lazy load heavy components for better mobile performance
+const AboutUs1 = dynamic(() => import('@/components/mvpblocks/about-us-1'), {
+  loading: () => <div className="h-96 bg-background animate-pulse rounded-lg" />
+});
+const ProcessSection = dynamic(() => import('@/components/process-section'), {
+  loading: () => <div className="h-96 bg-background animate-pulse rounded-lg" />
+});
+const PricingSection = dynamic(() => import('@/components/pricing-section'), {
+  loading: () => <div className="h-96 bg-background animate-pulse rounded-lg" />
+});
+const ContactSection = dynamic(() => import('@/components/contact-section'), {
+  loading: () => <div className="h-96 bg-background animate-pulse rounded-lg" />
+});
+const FaqsAccordion = dynamic(() => import('@/components/faqs-accordion').then(mod => ({ default: mod.FaqsAccordion })), {
+  loading: () => <div className="h-96 bg-background animate-pulse rounded-lg" />
+});
+const FooterSimple = dynamic(() => import('@/components/footer-simple').then(mod => ({ default: mod.FooterSimple })), {
+  loading: () => <div className="h-32 bg-background animate-pulse rounded-lg" />
+});
 
 export default function Home() {
   return (

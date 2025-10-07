@@ -60,8 +60,8 @@ export default function ProcessSection() {
 
         {/* Steps using the same card style as About Us values */}
         <div className="mx-auto max-w-6xl relative">
-          {/* Purple gradient shadow */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl -z-10" />
+          {/* Purple gradient shadow - Mobile optimized */}
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-primary/2 to-transparent rounded-3xl blur-2xl -z-10 md:blur-3xl" />
           <ol className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.number}>

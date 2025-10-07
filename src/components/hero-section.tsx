@@ -118,19 +118,20 @@ export default function HeroSection() {
                                     </Button>
                                 </AnimatedGroup>
 
-                                {/* Video showcase */}
+                                {/* Video showcase - Mobile optimized */}
                                 <div className="mt-20 flex justify-center px-4">
                                     <div className="relative w-full max-w-7xl rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 p-2 shadow-2xl shadow-primary/25">
                                         <div className="rounded-2xl overflow-hidden bg-background">
                                             <video 
-                                                className="w-full h-auto min-h-[300px] sm:min-h-[400px] md:min-h-[500px] rounded-2xl object-cover"
+                                                className="w-full h-auto min-h-[200px] sm:min-h-[300px] md:min-h-[500px] rounded-2xl object-cover"
                                                 controls
                                                 autoPlay
                                                 muted
                                                 playsInline
                                                 loop
-                                                preload="metadata"
+                                                preload="none"
                                                 poster="/video-poster.jpg"
+                                                loading="lazy"
                                             >
                                                 <source src="/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
