@@ -36,6 +36,19 @@
   .blur-2xl {
     filter: blur(4px);
   }
+  
+  /* Disable all animations on mobile except hero */
+  .mobile-no-animation {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .mobile-no-animation * {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
 }
 
 .spin {

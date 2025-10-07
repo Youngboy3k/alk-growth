@@ -201,7 +201,7 @@ export default function AboutUs1() {
                     ease: 'easeOut',
                   }}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="md:transition-all md:duration-300"
+                  className="md:transition-all md:duration-300 mobile-no-animation"
                 >
                   <CardHoverEffect
                     icon={<IconComponent className="h-6 w-6" />}

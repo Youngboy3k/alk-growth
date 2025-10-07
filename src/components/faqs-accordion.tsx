@@ -84,7 +84,7 @@ export function FaqsAccordion({
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0 }}
               viewport={{ once: true }}
-              className="group overflow-hidden rounded-2xl border border-border bg-background transition-all hover:border-primary hover:shadow-lg"
+              className="group overflow-hidden rounded-2xl border border-border bg-background transition-all hover:border-primary hover:shadow-lg mobile-no-animation"
             >
               <motion.button
                 onClick={() => toggleAccordion(index)}

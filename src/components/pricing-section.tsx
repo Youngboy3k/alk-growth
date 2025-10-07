@@ -25,7 +25,7 @@ export default function PricingSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.2, ease: "easeOut" }}
-          className="text-center mb-16"
+          className="text-center mb-16 mobile-no-animation"
         >
           <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6">
             Pricing
@@ -43,7 +43,7 @@ export default function PricingSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02 }}
-            className="h-full"
+            className="h-full mobile-no-animation"
           >
             <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
                   style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
@@ -99,7 +99,7 @@ export default function PricingSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02 }}
-            className="h-full"
+            className="h-full mobile-no-animation"
           >
             <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
                   style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>

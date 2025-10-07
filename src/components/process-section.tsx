@@ -48,7 +48,7 @@ export default function ProcessSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.2 }}
-          className="mx-auto mb-12 max-w-2xl text-center"
+          className="mx-auto mb-12 max-w-2xl text-center mobile-no-animation"
         >
           <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
             How it works
@@ -70,6 +70,7 @@ export default function ProcessSection() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, amount: 0.4 }}
                       transition={{ duration: 0.2, delay: 0 }}
+                      className="mobile-no-animation"
                     >
                   <CardHoverEffect
                     icon={
