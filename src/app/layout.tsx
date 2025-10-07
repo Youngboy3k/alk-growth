@@ -49,42 +49,45 @@ export default function RootLayout({
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "ALK Growth",
-            "url": "https://alkgrowth.com",
-            "logo": "https://alkgrowth.com/black-logo.png",
-            "description": "AI-powered web design and SEO agency helping businesses rank on Google and be recognized by AI systems. Based in Cyprus, serving clients globally.",
-            "founder": {
-              "@type": "Person",
-              "name": "Alex Kyriacou",
-              "jobTitle": "Founder & AI Web Designer",
-              "sameAs": [
-                "https://www.linkedin.com/in/alex-alkgrowth/"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "ALK Growth",
+              "url": "https://alkgrowth.com",
+              "logo": "https://alkgrowth.com/black-logo.png",
+              "description": "AI-powered web design and SEO agency helping businesses rank on Google and be recognized by AI systems. Based in Cyprus, serving clients globally.",
+              "founder": {
+                "@type": "Person",
+                "name": "Alex Kyriacou",
+                "jobTitle": "Founder & AI Web Designer",
+                "sameAs": [
+                  "https://www.linkedin.com/in/alex-alkgrowth/"
+                ]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "CY"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "alkgrowth@gmail.com",
+                "contactType": "business inquiries",
+                "availableLanguage": "English"
+              },
+              "areaServed": "Worldwide",
+              "keywords": [
+                "web design",
+                "SEO",
+                "AI automation",
+                "Cyprus",
+                "AI web agency"
               ]
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "CY"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "email": "alkgrowth@gmail.com",
-              "contactType": "business inquiries",
-              "availableLanguage": "English"
-            },
-            "areaServed": "Worldwide",
-            "keywords": [
-              "web design",
-              "SEO",
-              "AI automation",
-              "Cyprus",
-              "AI web agency"
-            ]
-          }
-        </script>
+            })
+          }}
+        />
       </head>
       <body
         className={`${plusJakartaSans.variable} ${lora.variable} ${ibmPlexMono.variable} antialiased`}
