@@ -21,9 +21,9 @@ export default function Home() {
         </section>
       </div>
       {/* Removed Why Choose / Results section */}
-      <section id="testimonials" className="scroll-mt-24 md:scroll-mt-28">
+      {/* <section id="testimonials" className="scroll-mt-24 md:scroll-mt-28">
         <TestimonialsSection />
-      </section>
+      </section> */}
       <section id="process" className="scroll-mt-24 md:scroll-mt-28">
         <ProcessSection />
       </section>
