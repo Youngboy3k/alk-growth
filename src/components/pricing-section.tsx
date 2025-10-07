@@ -43,7 +43,6 @@ export default function PricingSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
             whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
             className="h-full"
           >
             <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
@@ -100,7 +99,6 @@ export default function PricingSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
             whileHover={{ y: -8, scale: 1.02 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
             className="h-full"
           >
             <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0 max-w-[480px] mx-auto"
