@@ -3,9 +3,9 @@ import BeamsBackground from '@/components/kokonutui/beams-background';
 import AboutUs1 from '@/components/mvpblocks/about-us-1';
 import TestimonialsSection from '@/components/testimonials-section';
 import { FaqsAccordion } from '@/components/faqs-accordion';
+import ProcessSection from '@/components/process-section';
 import ContactSection from '@/components/contact-section';
 import { FooterSimple } from '@/components/footer-simple';
-import ProcessSection from '@/components/process-section';
 
 export default function Home() {
   return (
@@ -19,12 +19,12 @@ export default function Home() {
           <AboutUs1 />
         </section>
       </div>
-      <section id="process" className="scroll-mt-24 md:scroll-mt-28">
-        <ProcessSection />
-      </section>
       {/* Removed Why Choose / Results section */}
       <section id="testimonials" className="scroll-mt-24 md:scroll-mt-28">
         <TestimonialsSection />
+      </section>
+      <section id="process" className="scroll-mt-24 md:scroll-mt-28">
+        <ProcessSection />
       </section>
       <section id="contact" className="scroll-mt-24 md:scroll-mt-28">
         <ContactSection />

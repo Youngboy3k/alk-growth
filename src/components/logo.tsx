@@ -5,7 +5,7 @@ export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn('flex items-center space-x-3', className)}>
             <Image
-                src="/alk-logo.png"
+                src="/black-logo.png"
                 alt="ALK Growth Logo"
                 width={32}
                 height={32}

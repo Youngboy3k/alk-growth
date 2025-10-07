@@ -44,11 +44,10 @@ export default function HeroSection() {
                             <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                                 <AnimatedGroup variants={transitionVariants}>
                                     <Button
+                                        asChild
                                         variant="ghost"
-                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-                                        data-cal-link="alk-growth.com/30min"
-                                        data-cal-namespace="30min"
-                                        data-cal-config='{"layout":"month_view"}'>
+                                        className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950">
+                                        <a href="#contact">
                                         <span className="text-foreground text-sm">Limited Spots Available for Q4 Projects</span>
                                         <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -62,6 +61,7 @@ export default function HeroSection() {
                                                 </span>
                                             </div>
                                         </div>
+                                        </a>
                                     </Button>
                                 </AnimatedGroup>
 
@@ -118,11 +118,26 @@ export default function HeroSection() {
                                         <span className="text-nowrap">Let's Talk</span>
                                     </Button>
                                 </AnimatedGroup>
-                            </div>
-                        </div>
 
-                        <div>
-                            {/* App screen images removed */}
+                                {/* Video showcase */}
+                                <div className="mt-20 flex justify-center px-4">
+                                    <div className="relative w-full max-w-7xl rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-primary/10 to-primary/5 p-2 shadow-2xl shadow-primary/25">
+                                        <div className="rounded-2xl overflow-hidden bg-background">
+                                            <video 
+                                                className="w-full h-auto min-h-[400px] rounded-2xl"
+                                                controls
+                                                autoPlay
+                                                muted
+                                                playsInline
+                                                preload="auto"
+                                            >
+                                                <source src="/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

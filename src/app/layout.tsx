@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <head>
         <link rel="icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />

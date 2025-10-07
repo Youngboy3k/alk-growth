@@ -27,7 +27,7 @@ export function FooterSimple({
   links = {
     company: [
       { name: "About Us", url: "#about" },
-      { name: "Testimonials", url: "#testimonials" },
+      { name: "How it works", url: "#process" },
       { name: "FAQ", url: "#faq" },
       { name: "Contact", url: "#contact" },
     ],

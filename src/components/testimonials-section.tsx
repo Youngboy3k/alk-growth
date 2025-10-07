@@ -25,14 +25,6 @@ const testimonials: TestimonialProps[] = [
     rating: 5,
   },
   {
-    name: 'Thanos Konnaris',
-    role: 'Director',
-    company: 'Unifire',
-    image: '',
-    content: 'We needed a modern website that built trust with property managers and safety officers. ALK Growth delivered a professional, easy to navigate site that\'s helped us win bigger contracts. Highly recommend.',
-    rating: 5,
-  },
-  {
     name: 'Alex Asonitis',
     role: 'Owner',
     company: 'AsoMedia',
@@ -122,7 +114,7 @@ export default function TestimonialsSection() {
         </motion.div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard 
               key={`${testimonial.name}-${index}`}

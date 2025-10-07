@@ -14,31 +14,41 @@ interface FaqsAccordionProps {
 
 export function FaqsAccordion({
   title = "Frequently Asked Questions",
-  description = "Find answers to common questions about our product and services",
+  description = "",
   faqs = [
     {
-      question: "What is ALK Growth?",
-      answer: "ALK Growth creates custom websites for businesses. Modern design, clean code, and built to help you grow.",
+      question: "What is AI SEO?",
+      answer:
+        "AI SEO ensures your website is optimized not only for Google but also for AI systems like ChatGPT and Bing Copilot. It increases the chances of your business being referenced in AI-generated search results.",
     },
     {
-      question: "How do I get started?",
-      answer: "Click 'Get Started' for a free consultation. We'll discuss your vision and give you a clear plan and price.",
+      question: "How long does the full process take?",
+      answer:
+        "Once onboarding is complete, we typically launch your website within one week.",
     },
     {
-      question: "How much does a website cost?",
-      answer: "Every project is custom priced based on your needs. Free quotes, no surprises.",
+      question: "Do I need to provide text and images?",
+      answer:
+        "We can work with your existing materials or help you create professional copy and visuals.",
     },
     {
-      question: "How long does it take?",
-      answer: "Most websites are delivered in 2 to 4 weeks, depending on complexity.",
+      question: "What is blog automation?",
+      answer:
+        "We set up a content system that automatically publishes SEO-rich blog posts, improving your Google ranking and AI visibility over time.",
     },
     {
-      question: "Can I update it myself later?",
-      answer: "Yes! We can build on platforms that let you make easy updates, or we offer maintenance packages.",
+      question: "Can I edit my website later?",
+      answer: "Yes, you’ll have full access to edit text and images anytime.",
     },
     {
-      question: "What if I don't like the design?",
-      answer: "We work in stages with your feedback at each step. You'll love it before we launch.",
+      question: "Do you handle maintenance and updates?",
+      answer:
+        "Yes. We take care of ongoing maintenance, performance checks, and any minor adjustments you need moving forward. You focus on your business — we handle the rest.",
+    },
+    {
+      question: "What are the payment terms?",
+      answer:
+        "You pay 50% upfront after onboarding and the remaining 50% once your website is launched.",
     },
   ],
 }: FaqsAccordionProps) {

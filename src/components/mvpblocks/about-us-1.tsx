@@ -40,27 +40,27 @@ const iconComponents = {
 
 const defaultValues: AboutUsProps['values'] = [
   {
-    title: 'Tailored design',
+    title: 'Innovation',
     description:
-      'Each website is uniquely created for your brand and audience.',
+      'Modern design and cutting-edge technology that keeps you ahead.',
     icon: 'Lightbulb',
   },
   {
-    title: 'Google & AI SEO',
+    title: 'Collaboration',
     description:
-      'Optimized to be found by search engines and AI assistants.',
+      'We work with you every step. Your vision, brought to life.',
     icon: 'Users',
   },
   {
-    title: 'End-to-end service',
+    title: 'Excellence',
     description:
-      'From onboarding to maintenance, we take care of everything.',
+      'Clean code, beautiful design, zero compromises.',
     icon: 'Sparkles',
   },
   {
-    title: 'Professional results',
+    title: 'Impact',
     description:
-      'Beautiful design, powerful structure, and clear messaging.',
+      'Websites that don\'t just look good. They grow your business.',
     icon: 'Globe',
   },
 ];
@@ -174,12 +174,17 @@ export default function AboutUs1() {
             className="mb-12 text-center"
           >
             <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
-              Why Choose ALK Growth
+              Our Core Values
             </h2>
-            
+            <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
+              The principles that guide everything we do and every decision we
+              make.
+            </p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4 relative">
+            {/* Purple gradient shadow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent rounded-3xl blur-3xl -z-10" />
             {aboutData.values?.map((value, index) => {
               const IconComponent = iconComponents[value.icon];
 
@@ -201,7 +206,7 @@ export default function AboutUs1() {
                     icon={<IconComponent className="h-6 w-6" />}
                     title={value.title}
                     description={value.description}
-                    variant="blue"
+                    variant="purple"
                     glowEffect={true}
                     size="lg"
                   />

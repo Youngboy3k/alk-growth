@@ -33,12 +33,12 @@ export const VARIANTS = {
     color: 'rgb(59 130 246)',
   },
   purple: {
-    accent: 'purple-500',
-    gradient: 'from-purple-500/20 to-purple-500/0',
+    accent: 'primary',
+    gradient: 'from-primary/20 to-primary/0',
     shine:
-      '205deg, transparent 0deg, hsl(280deg 95% 39%) 20deg, hsl(280deg 100% 85% / 0.3) 280deg',
-    border: 'purple-500/20',
-    color: 'rgb(244 63 94)',
+      '205deg, transparent 0deg, hsl(var(--primary)) 20deg, hsl(var(--primary) / 0.3) 280deg',
+    border: 'primary/20',
+    color: 'hsl(var(--primary))',
   },
   amber: {
     accent: 'amber-500',
@@ -102,7 +102,7 @@ export function CardHoverEffect({
       whileHover={interactive ? { scale: hoverScale } : undefined}
       transition={{ duration: 0.3, ease: 'easeInOut', type: 'keyframes' }}
       className={cn(
-        'group relative z-10 w-full cursor-pointer overflow-hidden rounded-2xl',
+        'group relative z-0 w-full cursor-pointer overflow-hidden rounded-2xl',
         sizeConfig.padding,
         // Light mode styles
         'bg-white/80 before:bg-linear-to-b before:from-white/5 before:to-white/20 before:backdrop-blur-3xl',
