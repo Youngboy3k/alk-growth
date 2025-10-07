@@ -1,4 +1,6 @@
-﻿import HeroSection from "@/components/hero-section";
+﻿"use client";
+
+import HeroSection from "@/components/hero-section";
 import BeamsBackground from "@/components/kokonutui/beams-background";
 import { FaqsAccordion } from "@/components/faqs-accordion";
 import { FooterSimple } from "@/components/footer-simple";
