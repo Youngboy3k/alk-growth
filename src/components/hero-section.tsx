@@ -129,7 +129,8 @@ export default function HeroSection() {
                                                 autoPlay
                                                 muted
                                                 playsInline
-                                                preload="auto"
+                                                preload="metadata"
+                                                poster="/video-poster.jpg"
                                             >
                                                 <source src="/Untitled video - Made with Clipchamp.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
