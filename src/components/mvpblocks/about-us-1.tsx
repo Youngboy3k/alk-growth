@@ -196,11 +196,12 @@ export default function AboutUs1() {
                     valuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
                   }
                   transition={{
-                    duration: 0.6,
-                    delay: index * 0.1 + 0.2,
+                    duration: 0.2,
+                    delay: 0,
                     ease: 'easeOut',
                   }}
                   whileHover={{ y: -5, scale: 1.02 }}
+                  className="md:transition-all md:duration-300"
                 >
                   <CardHoverEffect
                     icon={<IconComponent className="h-6 w-6" />}

@@ -47,7 +47,7 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.2 }}
           className="mx-auto mb-12 max-w-2xl text-center"
         >
           <h2 className="from-foreground/80 via-foreground to-foreground/80 bg-gradient-to-r bg-clip-text text-3xl font-bold tracking-tight text-transparent sm:text-4xl">
@@ -65,12 +65,12 @@ export default function ProcessSection() {
           <ol className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.number}>
-                <motion.div
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.4 }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                >
+                    <motion.div
+                      initial={{ opacity: 0, y: 24 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.4 }}
+                      transition={{ duration: 0.2, delay: 0 }}
+                    >
                   <CardHoverEffect
                     icon={
                       step.icon === 'calendar' ? (

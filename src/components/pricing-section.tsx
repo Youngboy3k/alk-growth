@@ -24,7 +24,7 @@ export default function PricingSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+          transition={{ duration: 0.2, ease: "easeOut" }}
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-semibold text-foreground mb-6">
@@ -41,7 +41,7 @@ export default function PricingSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02 }}
             className="h-full"
           >
@@ -97,7 +97,7 @@ export default function PricingSection() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+            transition={{ duration: 0.2, delay: 0, ease: "easeOut" }}
             whileHover={{ y: -8, scale: 1.02 }}
             className="h-full"
           >

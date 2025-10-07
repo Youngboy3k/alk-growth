@@ -82,7 +82,7 @@ export function FaqsAccordion({
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.2, delay: 0 }}
               viewport={{ once: true }}
               className="group overflow-hidden rounded-2xl border border-border bg-background transition-all hover:border-primary hover:shadow-lg"
             >
