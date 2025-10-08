@@ -7,11 +7,11 @@ import React from 'react'
 import { cn } from '@/lib/utils'
 
 const menuItems = [
-    { name: 'About Us', href: '/about' },
-    { name: 'How it works', href: '/process' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'About Us', href: '#about' },
+    { name: 'How it works', href: '#process' },
+    { name: 'Pricing', href: '#pricing' },
+    { name: 'Contact', href: '#contact' },
+    { name: 'FAQ', href: '#faq' },
 ]
 
 export const HeroHeader = () => {
@@ -25,6 +25,19 @@ export const HeroHeader = () => {
         window.addEventListener('scroll', handleScroll)
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
+
+    const handleNavClick = (href: string) => {
+        if (href.startsWith('#')) {
+            const element = document.querySelector(href)
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                })
+            }
+        }
+        setMenuState(false) // Close mobile menu
+    }
     return (
         <header>
             <nav
@@ -53,11 +66,15 @@ export const HeroHeader = () => {
                             <ul className="flex gap-8 text-sm">
                                 {menuItems.map((item, index) => (
                                     <li key={index}>
-                                        <Link
+                                        <a
                                             href={item.href}
-                                            className="text-muted-foreground hover:text-primary block duration-150">
+                                            onClick={(e) => {
+                                                e.preventDefault()
+                                                handleNavClick(item.href)
+                                            }}
+                                            className="text-muted-foreground hover:text-primary block duration-150 cursor-pointer">
                                             <span>{item.name}</span>
-                                        </Link>
+                                        </a>
                                     </li>
                                 ))}
                             </ul>
@@ -68,11 +85,15 @@ export const HeroHeader = () => {
                                 <ul className="space-y-6 text-base">
                                     {menuItems.map((item, index) => (
                                         <li key={index}>
-                                            <Link
+                                            <a
                                                 href={item.href}
-                                                className="text-muted-foreground hover:text-primary block duration-150">
+                                                onClick={(e) => {
+                                                    e.preventDefault()
+                                                    handleNavClick(item.href)
+                                                }}
+                                                className="text-muted-foreground hover:text-primary block duration-150 cursor-pointer">
                                                 <span>{item.name}</span>
-                                            </Link>
+                                            </a>
                                         </li>
                                     ))}
                                 </ul>

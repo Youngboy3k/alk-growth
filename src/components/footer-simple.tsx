@@ -26,11 +26,11 @@ export function FooterSimple({
   description = "Custom websites that help businesses grow. Modern design, clean code, and built exactly how you want them.",
   links = {
     company: [
-      { name: "About Us", url: "/about" },
-      { name: "How it works", url: "/process" },
-      { name: "Pricing", url: "/pricing" },
-      { name: "Contact", url: "/contact" },
-      { name: "FAQ", url: "/faq" },
+      { name: "About Us", url: "#about" },
+      { name: "How it works", url: "#process" },
+      { name: "Pricing", url: "#pricing" },
+      { name: "Contact", url: "#contact" },
+      { name: "FAQ", url: "#faq" },
     ],
   },
   social = {},
