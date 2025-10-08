@@ -100,9 +100,9 @@ export default function HeroSection() {
                                         <Button
                                             size="lg"
                                             className="rounded-xl px-5 text-base"
-                                            data-cal-link="alk-growth.com/30min"
+                                            data-cal-link="alex-alkgrowth/30min"
                                             data-cal-namespace="30min"
-                                            data-cal-config='{"layout":"month_view"}'>
+                                            data-cal-config='{"layout":"month_view","theme":"light"}'>
                                             <span className="text-nowrap">Get Started</span>
                                         </Button>
                                     </div>

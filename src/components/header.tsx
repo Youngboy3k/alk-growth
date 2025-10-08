@@ -81,9 +81,9 @@ export const HeroHeader = () => {
                                 <Button
                                     size="sm"
                                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                                    data-cal-link="alk-growth.com/30min"
+                                    data-cal-link="alex-alkgrowth/30min"
                                     data-cal-namespace="30min"
-                                    data-cal-config='{"layout":"month_view"}'>
+                                    data-cal-config='{"layout":"month_view","theme":"light"}'>
                                     <span>Get Started</span>
                                 </Button>
                             </div>
