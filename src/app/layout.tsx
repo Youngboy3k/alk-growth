@@ -30,6 +30,25 @@ export const metadata: Metadata = {
     shortcut: '/favicon-20250930184229.ico',
     apple: '/apple-touch-icon.png',
   },
+  openGraph: {
+    title: "ALK Growth - Custom Websites That Help Businesses Grow",
+    description: "Professional website design and development services. Modern design, clean code, and built exactly how you want them.",
+    url: "https://alkgrowth.com",
+    siteName: "ALK Growth",
+    images: [{
+      url: "https://alkgrowth.com/logo-square.png",
+      width: 1200,
+      height: 1200,
+      alt: "ALK Growth Logo"
+    }],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ALK Growth - Custom Websites That Help Businesses Grow",
+    description: "Professional website design and development services. Modern design, clean code, and built exactly how you want them.",
+    images: ["https://alkgrowth.com/logo-square.png"]
+  }
 };
 
 export default function RootLayout({
@@ -59,7 +78,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "ALK Growth",
               "url": "https://alkgrowth.com",
-              "logo": "https://alkgrowth.com/black-logo.png",
+              "logo": "https://alkgrowth.com/logo-square.png",
               "description": "AI-powered web design and SEO agency helping businesses rank on Google and be recognized by AI systems. Based in Cyprus, serving clients globally.",
               "founder": {
                 "@type": "Person",
