@@ -9,6 +9,7 @@ interface FaqsAccordionProps {
   faqs?: Array<{
     question: string
     answer: string
+    hidden?: boolean
   }>
 }
 
@@ -17,9 +18,9 @@ export function FaqsAccordion({
   description = "",
   faqs = [
     {
-      question: "What is AI SEO?",
+      question: "What is AI visibility?",
       answer:
-        "AI SEO ensures your website is optimized not only for Google but also for AI systems like ChatGPT and Bing Copilot. It increases the chances of your business being referenced in AI-generated search results.",
+        "AI visibility ensures your website is optimized not only for Google but also for AI systems like ChatGPT and Bing Copilot. It increases the chances of your business being referenced in AI-generated search results.",
     },
     {
       question: "How long does the full process take?",
@@ -35,6 +36,7 @@ export function FaqsAccordion({
       question: "What is blog automation?",
       answer:
         "We set up a content system that automatically publishes SEO-rich blog posts, improving your Google ranking and AI visibility over time.",
+      hidden: true,
     },
     {
       question: "Can I edit my website later?",
@@ -77,7 +79,7 @@ export function FaqsAccordion({
         </motion.div>
 
         <div className="space-y-4">
-          {faqs.map((faq, index) => (
+          {faqs.filter(faq => !faq.hidden).map((faq, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}

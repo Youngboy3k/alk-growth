@@ -35,8 +35,8 @@ export default function PricingSection() {
           </p>
         </motion.div>
 
-        {/* Pricing Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
+        {/* Row 1: Web Development - Two Large Cards */}
+        <div className="web-dev grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-16">
           {/* Single-Page Website */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -93,7 +93,7 @@ export default function PricingSection() {
             </Card>
           </motion.div>
 
-          {/* Professional Website */}
+          {/* Multi-Page Website */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -106,13 +106,13 @@ export default function PricingSection() {
               <CardContent className="p-8 lg:p-12 h-full flex flex-col min-h-[600px]">
                 <div className="mb-6">
                   <h3 className="text-2xl font-semibold text-foreground mb-2">
-                    Professional Website
+                    Multi-Page Website
                   </h3>
                   <p className="text-[#555] text-base mb-4">
                     Best for growing businesses with more to showcase
                   </p>
                   <div className="text-3xl md:text-4xl font-medium text-primary mb-6">
-                    €1,400
+                    €1 500
                     <span className="text-lg text-[#555] font-normal"> (one-time)</span>
                   </div>
                 </div>
@@ -148,14 +148,13 @@ export default function PricingSection() {
           </motion.div>
         </div>
 
-        {/* Add-ons Section */}
+        {/* Row 2: Maintenance & Support */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="space-y-8 mb-16"
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="maintenance mb-16"
         >
-          {/* Maintenance & Support */}
           <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-out border-0"
                style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
             <h3 className="text-xl font-semibold text-foreground mb-4">
@@ -165,23 +164,170 @@ export default function PricingSection() {
               Your first month is included. After that, ongoing care continues for <span className="font-medium text-primary">€100/month</span>, covering updates, performance checks, and minor adjustments.
             </p>
           </div>
+        </motion.div>
 
-          {/* Blog Post Automation */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-out border-0"
-               style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
-            <h3 className="text-xl font-semibold text-foreground mb-4">
-              Optional Add-On: Blog Post Automation
-            </h3>
-            <p className="text-[#555] text-base mb-4">
-              Boost your visibility even further
-            </p>
-            <div className="text-2xl font-medium text-primary mb-4">
-              €500/month
-            </div>
-            <p className="text-[#555] text-base">
-              Includes 8 SEO-optimized blog posts per month tailored to your business and audience, uploaded directly to your website.
-            </p>
-          </div>
+        {/* Row 3: SEO Services - Three Equal Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="seo-services grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 hidden"
+        >
+          {/* Blog Posts */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.2, delay: 0.4, ease: "easeOut" }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="h-full mobile-no-animation"
+          >
+            <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0"
+                  style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    Blog Posts
+                  </h3>
+                  <div className="text-2xl font-medium text-primary mb-4">
+                    €600
+                    <span className="text-lg text-[#555] font-normal">/month</span>
+                  </div>
+                </div>
+                
+                <p className="text-[#555] text-base mb-6 flex-1">
+                  Regular, high-quality blog content to boost your online presence and engage your audience.
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium text-foreground mb-3">Includes:</h4>
+                  <ul className="space-y-2 text-[#555] text-sm">
+                    <li>• 4 SEO-optimized blog posts per month</li>
+                    <li>• Keyword research and optimization</li>
+                    <li>• Content tailored to your business</li>
+                    <li>• Direct upload to your website</li>
+                  </ul>
+                </div>
+                
+                <div className="flex justify-center mt-auto">
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                    <Button
+                      size="lg"
+                      className="rounded-xl px-5 text-base"
+                      asChild
+                    >
+                      <a href="#contact">
+                        <span className="text-nowrap">Get Started</span>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* SEO Optimization */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.2, delay: 0.5, ease: "easeOut" }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="h-full mobile-no-animation"
+          >
+            <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0"
+                  style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    SEO Optimization
+                  </h3>
+                  <div className="text-2xl font-medium text-primary mb-4">
+                    €600
+                    <span className="text-lg text-[#555] font-normal">/month</span>
+                  </div>
+                </div>
+                
+                <p className="text-[#555] text-base mb-6 flex-1">
+                  Comprehensive SEO services to improve your search engine rankings and drive organic traffic.
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium text-foreground mb-3">Includes:</h4>
+                  <ul className="space-y-2 text-[#555] text-sm">
+                    <li>• Technical SEO audits</li>
+                    <li>• Keyword research and strategy</li>
+                    <li>• On-page optimization</li>
+                    <li>• Performance monitoring</li>
+                  </ul>
+                </div>
+                
+                <div className="flex justify-center mt-auto">
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                    <Button
+                      size="lg"
+                      className="rounded-xl px-5 text-base"
+                      asChild
+                    >
+                      <a href="#contact">
+                        <span className="text-nowrap">Get Started</span>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          {/* SEO + Blog Bundle */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.2, delay: 0.6, ease: "easeOut" }}
+            whileHover={{ y: -8, scale: 1.02 }}
+            className="h-full mobile-no-animation"
+          >
+            <Card className="h-full bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out border-0"
+                  style={{ boxShadow: '0 10px 40px rgba(130, 100, 255, 0.15)' }}>
+              <CardContent className="p-8 h-full flex flex-col">
+                <div className="mb-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    SEO + Blog Bundle
+                  </h3>
+                  <div className="text-2xl font-medium text-primary mb-4">
+                    €1 000
+                    <span className="text-lg text-[#555] font-normal">/month</span>
+                  </div>
+                </div>
+                
+                <p className="text-[#555] text-base mb-6 flex-1">
+                  Complete content and SEO solution combining blog posts with comprehensive optimization for maximum impact.
+                </p>
+
+                <div className="mb-6">
+                  <h4 className="text-lg font-medium text-foreground mb-3">Includes:</h4>
+                  <ul className="space-y-2 text-[#555] text-sm">
+                    <li>• Everything from Blog Posts</li>
+                    <li>• Everything from SEO Optimization</li>
+                    <li>• 8 blog posts per month</li>
+                    <li>• Advanced SEO strategy</li>
+                  </ul>
+                </div>
+                
+                <div className="flex justify-center mt-auto">
+                  <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
+                    <Button
+                      size="lg"
+                      className="rounded-xl px-5 text-base"
+                      asChild
+                    >
+                      <a href="#contact">
+                        <span className="text-nowrap">Get Started</span>
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
         </motion.div>
 
         {/* CTA Section */}
