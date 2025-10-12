@@ -22,13 +22,9 @@ export const metadata: Metadata = {
   title: "ALK Growth - Custom Websites That Help Businesses Grow",
   description: "Professional website design and development services. Modern design, clean code, and built exactly how you want them.",
   icons: {
-    icon: [
-      { url: '/favicon-20250930184229.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    shortcut: '/favicon-20250930184229.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo-square.png',
   },
   openGraph: {
     title: "ALK Growth - Custom Websites That Help Businesses Grow",
@@ -59,17 +55,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="light">
       <head>
-        <link rel="icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon-20250930184229.ico?v=3" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=3" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=3" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=3" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000, immutable" />
         <meta name="theme-color" content="#7033ff" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="msapplication-TileImage" content="/logo-square.png" />
+        <meta name="msapplication-TileColor" content="#7033ff" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
